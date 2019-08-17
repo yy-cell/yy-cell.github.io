@@ -275,8 +275,8 @@
 
 	Posted on
 
-	<a href="/2019/08/17/VLAN/" itemprop="url">
-		<time datetime="2019-08-17T05:03:25.689Z" itemprop="datePublished">
+	<a href="/2019/08/17/PVST生成树协议/" itemprop="url">
+		<time datetime="2019-08-17T09:54:57.548Z" itemprop="datePublished">
 	  		2019-08-17
 	  </time>
 	</a>
@@ -293,8 +293,8 @@
 
 	Updated on
 
-	<a href="/2019/08/17/VLAN/" itemprop="url">
-		<time datetime="2019-08-17T05:03:25.689Z" itemprop="dateUpdated">
+	<a href="/2019/08/17/PVST生成树协议/" itemprop="url">
+		<time datetime="2019-08-17T09:54:57.548Z" itemprop="dateUpdated">
 	  		2019-08-17
 	  </time>
 	</a> 
@@ -314,10 +314,59 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>1.VLAN是什么？有什么作用？<br>vlan是虚拟局域网，它可以减少网络设备的移动、添加和修改的管理开销减少；可以控制广播活动；可提高网络的安全性</p>
-<p>2.VLAN的划分方法有哪些？<br>可以使用端口划分，可以使用IP划分<br>3.为什么要做冗余链路？冗余链路会带来什么问题？<br>为了保持网络的稳定性,在多台交换机组成的网络环境中,通常都使用一些备份连接,以提高网络的健壮性、稳定性.<br>冗余链路也会使网络存在环路,环路问题是备份链路所面临的最为严重的问题<br>4.怎么避免环路？<br>生成树协议<br>5.STP是什么？有什么作用？有哪些类型？以及每种类型的特点是什么？<br>STP是生成树协议，作用是防止网桥网络中的冗余链路形成环路工作，他可以通过设置主，备份网桥有选择性的阻塞环路。</p>
-<p>6.STP的工作过程是怎么样的？<br>当线路出现故障，断开的接口被激活，恢复通信，起备份线路的作用<br>7.STP端口有哪些状态？每种状态的能力是什么？<br>阻塞：二层端口为非指定端口，也不会参与数据帧的转发<br>侦听：参与数据帧的转发<br>学习：参与数据帧的转发，并开始填写MAC表<br>转发：转发数据帧，并同时收发BPDU<br>禁用：不会参与生成树，也不会转发数据帧<br>8.100Mps的和10Mps在STP中COST值是多少？<br>19 100<br>9.本征VLAN是什么？有什么作用？<br>众多的vlan中指定一种vlan，就是管理vlan，在trunk中唯一不会打标记的一种vlan</p>
-<p>10.链路聚合协议有哪两种？端口模式分别有哪些？两端端口哪些模式可以实现聚合？<br>PAgP是思科私有的，lacp协议；端口模式selected、standby  同种模式端口才能实现聚合<br>11.链路聚合如果是三条100Mps的带宽，聚合后的信道带宽是多少？<br>300<br>12.svi接口时什么接口？<br>是在三层交换机设置时的虚拟子接口，用于作为vlan的网管<br>13.VTP有几种模式？每种模式有什么区别？<br>服务器模式：可以增删改， 学习转发相同域名的VTP消息，提供VTP消息：包括VLAN ID和名字信息<br>透明模式：只可以进行数据转发，不学习VTP消息,不提供VTP消息，可以添加、删除和更改VLAN，只在本地有效 VLAN信息写入NVRAM<br>客户端模式：请求VTP消息，不能增 删 改；学习转发相同域名的VTP消息<br>14.层三交换机和层二交换机有什么区别？<br>三层交换机与二层交换机最大的区别是三层交换机可以开启路由功能<br>15.交换机的工作原理时什么？以及交换机的三种转发模式是什么？<br>交换机就是在数据传输时传输信息并且储存通过该交换机数据包里面的源MAC地址以及进入该交换机那个端口号到MAC地址表里面<br>16.172.16.0.78/25，请问网络号是多少？本网络有多少个可用IP？<br>                172.16.0.0 126个可用<br>17.vlsm是什么？<br>VLSM就是可变长子网掩码，可以对子网进行层次化编址，以便最有效的利用现有的地址空间<br>18.IP地址分类？有哪几类？<br>IP地址根据网络号和主机号分类；可以分为A,B,C,D,E<br>19.每类中的私有IP范围是多少？<br>A类：1.0.0.0-126.0.0.0<br>B类：128.0.0.0-191.255.0.0<br>C类：192.0.0.0-223.255.255.0<br>D类：多播地址前面全是”1110“网络号都是子啊224-239 之间<br>E 类：保留地址最前面为”1111“网络号在240-255之间<br>20.ICMP的类型有哪些？目标不可达和超时类型分别是什么？<br>应应答（ECHO-REPLY）<br>不可到达  ：路由器或者主机不能传递数据时使用<br> 源抑制：控制流量，通知主机减少数据报流量<br> 重定向：<br> 响应请求（ECHO-REQUEST）<br> 超时<br>參数失灵<br>时间戳请求：测试两台主机之间数据报来回一次的传输时间<br> 时间戳应答：测试两台主机之间数据报来回一次的传输时间（传输时，主机填充原始时间戳，接受方收到请求后填充接受时间戳后以类型值字段14的报文格式返回，发送方计算这个时间差）<br>地址掩码请求<br>地址掩码应答</p>
+		<p>PVST 生成树协议</p>
+<p>1、什么是PVST</p>
+<p>PVST是Cisco私有的，为每个VLAN构造一棵生成树</p>
+<p>2、PVST在实际中的应用</p>
+<p>配置网络中比较稳定的交换机为根网桥</p>
+<p>利用PVST实现网络的负载分担</p>
+<p>3、PVST的配置</p>
+<p>命令启用生成树：Switch(config)#spanning-tree vlan vlan-list</p>
+<p>设置根网桥：Switch(config)#spanning-tree vlan vlan-list root primary | secondary</p>
+<p>-设置为primary后，优先级变成24576</p>
+<p>-设置为secondary后， 优先级变成28672</p>
+<p>修改网桥的优先级：Switch(config)#spanning-tree vlan vlan-list priority Bridge-priority </p>
+<p>-优先级的值为4096的倍数</p>
+<p>修改端口成本：Switch(config-if)#spanning-tree vlan vlan-list cost cost</p>
+<p>修改端口优先级：Switch(config-if)#spanning-tree vlan vlan-list port-priority priority</p>
+<p>配置上行速链路：Switch(config)#spanning-tree uplinkfast</p>
+<p>配置端口速链路：Switch(config-if)#spanning-tree portfast</p>
+<p>查看生成树的配置：Switch#show spanning-tree</p>
+<p>查看某个VLAN的生成树详细信息：Switch#show spanning-tree vlan vlan-id detail</p>
+<p><strong>三、**</strong>以太网端口聚合**</p>
+<p><strong>1、**</strong>什么是端口聚合？**</p>
+<p>链路聚合又称为端口聚合，端口捆绑，英文名porttrunking。是一种聚合多个物理接口 ( that ) 创建一个逻辑接口。你可以捆扎( bundle ) 八个单独的活动链接到一个信道端口，以提供更高的<strong>带宽</strong>和<strong>冗余</strong>。端口通道也负载平衡这些物理接口上的通信量。只要端口通道中的至少一个物理接口可操作，端口通道就可以保持运行。</p>
+<p><strong>2、**</strong>channel-group** <strong>模式</strong></p>
+<p>PAgP 是 Cisco私有，只能在 Cisco Switch 上设定，PAgP 有两个模式，分別是 Desirable 与 Auto当 PAgP 成功建立 EtherChannel 后，PAgP Message 会继续定时传送去维持 EtherChannel。</p>
+<p>Desirable  Auto</p>
+<p>Desirable    √         √   主动发送PAgP报文</p>
+<p>Auto        √         x   被动发送PAgP报文</p>
+<p>On                        手动设置，需要两边都设置</p>
+<p>LACP 是 IEEE Standard</p>
+<p>Active  Passive</p>
+<p>Active        √         √   主动发送LACP报文</p>
+<p>Passive       √         x    主动接收LACP报文</p>
+<p><strong>3、**</strong>channel-group<strong>**说明</strong></p>
+<p>（1）Cisco最多允许EtherChannel绑定8个端口；如果是百兆网络，总带宽可达1.6Gbit/s；如果是千兆网络，总带宽可达16Gbit/s。</p>
+<p>（2）EtherChannel不支持10M端口；</p>
+<p>（3）EtherChannel编号只在本地有效，链路两端的编号可以不一样；</p>
+<p>（4）EtherChannel默认使用PAgP协议；</p>
+<p>（5）EtherChannel默认情况下是基于源MAC地址的负载平衡；</p>
+<p>（6）一个EtherChannel内所有的端口都必须具有相同的端口速率和双工模式，LACP只能是全双工模式；</p>
+<p>（7）channel-group接口会自动继承最小物理接口，或最先配置的接口模式；</p>
+<p>（8）cisco的交换机不仅可以支持第二层EtherChannel,还可以支持第三层EtherChannel。</p>
+<p><strong>4、配置端口聚合</strong></p>
+<p>Switch(config)#int port-channel 1</p>
+<p>Switch(config-if)#switchport mode trunk</p>
+<p>Switch(config)#int range f0/1-2</p>
+<p>Switch(config-if-range)#channel-group 1 mode on</p>
+<p><strong>5、配置流量均衡</strong></p>
+<p>Switch(config)#int f0/1</p>
+<p>Switch(config-if)#spanning-tree vlan 10 port-priority 16</p>
+<p>Switch(config-if)#spanning-tree vlan 20 port-priority 32</p>
+<p>Switch(config)#int f0/2</p>
+<p>Switch(config-if)#spanning-tree vlan 10 port-priority 32</p>
+<p>Switch(config-if)#spanning-tree vlan 20 port-priority 16</p>
 	
 	</div>
 	
@@ -336,10 +385,10 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/17/OSI参考七层模型：/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
+			<a href="/2019/08/17/热备份路由协议/" title="" rel="next">
+				Next post&raquo;
+			</a>
 			
 	</span>
 
