@@ -275,8 +275,8 @@
 
 	Posted on
 
-	<a href="/2019/08/17/配置EIGRP/" itemprop="url">
-		<time datetime="2019-08-17T08:52:46.790Z" itemprop="datePublished">
+	<a href="/2019/08/17/配置rip动态路由/" itemprop="url">
+		<time datetime="2019-08-17T09:02:51.707Z" itemprop="datePublished">
 	  		2019-08-17
 	  </time>
 	</a>
@@ -293,8 +293,8 @@
 
 	Updated on
 
-	<a href="/2019/08/17/配置EIGRP/" itemprop="url">
-		<time datetime="2019-08-17T08:52:46.790Z" itemprop="dateUpdated">
+	<a href="/2019/08/17/配置rip动态路由/" itemprop="url">
+		<time datetime="2019-08-17T09:02:51.707Z" itemprop="dateUpdated">
 	  		2019-08-17
 	  </time>
 	</a> 
@@ -314,13 +314,39 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>配置EIGRP:</p>
-<p>#router eigrp 10</p>
-<p>#network 13.1.1.0 0.0.0.255</p>
-<p>#network 34.1.1.0 0.0.0.255</p>
-<p>#no auto-summary<br>配置非等价均衡负载;<br>计算V值<br>P 44.1.1.0/24, 1 successors, FD is 158720<br>         via 13.1.1.2 (158720/156160), FastEthernet0/1<br>         via 12.1.1.2 (20642560/156160), Serial0/1/0<br>         V=20642560/158720（取整数）<br>配置非等价负载均衡<br>R1(config)#router eigrp 10<br>R1(config-router)#variance 131<br>EIFRP支持MD5身份认证：基于链路（在每个网段的两个端口上都要设置）<br>1.创建密钥链，它是一组可能的密钥（密码）<br>2.对每个密钥分配密钥ID<br>3.标识密钥<br>4.（可选）指定密钥的有效期<br>5.在接口上启用MD5身份验证<br>6.指定接口使用的密钥链<br>R3(config)#key chain YY1<br>R3(config-keychain)#key 1<br>R3(config-keychain-key)#key-string ccie<br>R3(config)#int f0/1<br>R3(config-if)#ip authentication mode eigrp 10 md5<br>R3(config-if)#ip authentication key-chain eigrp 10 YY1<br>EIGRP路由手动汇总：<br>R3(config)#int f0/1<br>R3(config-if)#ip summary-address eigrp 10 12.1.0.0 255.255.0.0<br>配置被动接口：</p>
-<p>#router eigrp 10</p>
-<p>#passive-interface loopback 1</p>
+		<p>(1) 使用 no ip route 命令，来删除路由器上已配置的任一静态路由或默认路由。下面就是一个 </p>
+<p>示例，它给出了在 Lab_A路由器上删除静态路由的操作: </p>
+<p>Lab_A#config t </p>
+<p>Lab_A(config)#no ip route 172.16.30.0 255.255.255.0 </p>
+<p>172.16.20.2 </p>
+<p>Lab_A(config)#no ip route 172.16.40.0 255.255.255.0 </p>
+<p>172.16.20.2 </p>
+<p>为路由器 Lab_B和 Lab_C 执行同样的操作。验证目前路由选择表中只存在直接相连的网络。 </p>
+<p>(2) 清除了静态路由和默认路由之后，在路由器 Lab_A 上通过输入 config t进入配置模式。 </p>
+<p>(3) 通过输入router rip 并按下回车键配置路由器，让它使用 RIP 路由选择协议，如下所示: </p>
+<p>config t </p>
+<p>router rip </p>
+<p>(4) 为需要进行通告的网络添加网络号。由于路由器 Lab 有两个接口分别位于两个不同的网络 </p>
+<p>中，因此你必须使用每个接口所在网络的网络 ID 完成网络声明。另外，你也可以使用这些网络的一 </p>
+<p>个汇总，使用一个共同的声明，从而使路由选择表最小化。由于这两个网络分别是 172.16.10.0/24 </p>
+<p>和172.16.20.0/24 ，网络汇总 172.16.0.0 将同时包含这两个子网。所以，要完成配置可以输入 network </p>
+<p>172.16.0.0 并接下回车键。 </p>
+<p>(5) 按下 Ctrl+Z，退出配置模式。</p>
+<p>(6) 路由器Lab_B Lab_C 上的接口分别属于 172.16.20.0/24和172.16 .3 0.0/24 网络，因此同样的 </p>
+<p>汇总网络声明也是可以正常工作的。输入相同的命令，如下所示: </p>
+<p>Config t </p>
+<p>Router rip </p>
+<p>network 172.16.0.0 </p>
+<p>(7) 通过输入下列命令，验证阳 在每个路由器上的运行情况: </p>
+<p>show ip protocols </p>
+<p>(应能表明RIP正在本路由器上运行) </p>
+<p>show ip route </p>
+<p>(应该给出当前使用的路由，并且在路由的左侧显示字符 R) </p>
+<p>show running-config or show run </p>
+<p>(应能表明 RIP 当前正在运行，并且网络正被通告) </p>
+<p>(8) 通过输入 copy run start或copy running-config startup-config 命令，并按下回车键， </p>
+<p>保存配置。 </p>
+<p>(9) 通过 ping 所有的远程网络和主机验证此网络的配置情况。</p>
 	
 	</div>
 	
@@ -339,12 +365,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/17/配置rip动态路由/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/08/17/OSI参考七层模型：/" title="" rel="next">
+			<a href="/2019/08/17/配置EIGRP/" title="" rel="next">
 				Next post&raquo;
 			</a>
 			
