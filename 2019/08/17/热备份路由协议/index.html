@@ -275,8 +275,8 @@
 
 	Posted on
 
-	<a href="/2019/08/17/1、静态路由/" itemprop="url">
-		<time datetime="2019-08-17T09:18:31.255Z" itemprop="datePublished">
+	<a href="/2019/08/17/热备份路由协议/" itemprop="url">
+		<time datetime="2019-08-17T09:31:05.062Z" itemprop="datePublished">
 	  		2019-08-17
 	  </time>
 	</a>
@@ -293,8 +293,8 @@
 
 	Updated on
 
-	<a href="/2019/08/17/1、静态路由/" itemprop="url">
-		<time datetime="2019-08-17T09:18:31.255Z" itemprop="dateUpdated">
+	<a href="/2019/08/17/热备份路由协议/" itemprop="url">
+		<time datetime="2019-08-17T09:31:05.062Z" itemprop="dateUpdated">
 	  		2019-08-17
 	  </time>
 	</a> 
@@ -314,16 +314,18 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p> <strong>1、静态路由</strong></p>
-<p>指定一条可以到达目标网络的路径</p>
-<p>Router(config)#ip route network    [mask]{address | interface}[distance] [permanent]</p>
-<p>这是一个单方向的路由. 你必须配置一条反方向的路由</p>
-<p><strong>2、静态汇总路由</strong></p>
-<p><strong>3、静态默认（缺省）路由</strong></p>
-<p><strong>4、静态选择路由</strong></p>
-<p><strong>5、浮动静态路由</strong></p>
-<p><strong>6、用静态路由实现负载均衡</strong></p>
-<p><img src="https://t1.picb.cc/uploads/2019/08/17/gNzaHa.png" alt></p>
+		<p><strong>热备份路由协议</strong></p>
+<p><a href="https://baike.baidu.com/item/热备份路由协议/4389963" target="_blank" rel="noopener"><strong>热备份路由协议</strong></a><strong>(**</strong>HSRP<strong>**)</strong></p>
+<p>是思科推出的用于建立容错<a href="https://baike.baidu.com/item/默认网关/2152622" target="_blank" rel="noopener">默认网关</a>的专有<a href="https://baike.baidu.com/item/冗余协议/2828235" target="_blank" rel="noopener">冗余协议</a>，由RFC 2281进行描述。</p>
+<p><strong>虚拟路由</strong><a href="https://baike.baidu.com/item/冗余协议" target="_blank" rel="noopener"><strong>冗余协议</strong></a><strong>(**</strong>VRRP<strong>**)</strong></p>
+<p>是基于标准的HSRP替代协议，由IETF标准RFC 3768进行描述。这两种技术在概念上相似，但互不兼容。</p>
+<p>** 工作原理**</p>
+<p>HSRP在网络<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>之间建立<a href="https://baike.baidu.com/item/默认网关" target="_blank" rel="noopener">默认网关</a>的倒换框架，当主<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>不可达时进行切换。此协议经常与快速会聚路由协议EIGRP或OSPF<a href="https://baike.baidu.com/item/协同工作" target="_blank" rel="noopener">协同工作</a>。HSRP使用<a href="https://baike.baidu.com/item/多播地址" target="_blank" rel="noopener">多播地址</a>224.0.0.2和UDP端口1985向其他启用HSRP协议的<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>发送HELLO<a href="https://baike.baidu.com/item/报文" target="_blank" rel="noopener">报文</a>，来交流路由器间的优先级。配置有最高优先级的主路由器将成为<a href="https://baike.baidu.com/item/虚拟路由器" target="_blank" rel="noopener">虚拟路由器</a>，以预先配置好的<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>IP和MAC地址0000.0c07.acXX（XX是组IP的十六进制值）回应局域网对网关的ARP的请求。如果主<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>宕机，次优先级路由器将接管<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>IP并以同样的MAC地址回应ARP的请求，这样就实现了透明的<a href="https://baike.baidu.com/item/默认网关" target="_blank" rel="noopener">默认网关</a>自动倒换。</p>
+<p>热备份路由协议确保在某一时间内只有一台路由器（称为主动路由器）以虚拟路由器的名义转发数据包。备份路由器被选择，并时刻准备成为主动路由器（在当前主动路由器失效的情况下）。热备份路由协议定义了一种通过IP地址来确定主动和备份路由器的<a href="https://baike.baidu.com/item/机制" target="_blank" rel="noopener">机制</a>。一旦这些<a href="https://baike.baidu.com/item/确定" target="_blank" rel="noopener">确定</a>了，一个主动路由器出故障就不会出现重大的连接中断现象。</p>
+<p>在任何特定的网络中，可能有多个，也可能是重叠的，热备份群，每一个都有单一的媒体访问控制（MAC）地址和IP地址；IP地址应该属于初级子网，但它必须与实际或虚拟的地址（分配给网络中路由器或主机的地址）不同。 [1] </p>
+<p>HSRP和VRRP都不是路由协议，因为它们不发布IP路由也不影响<a href="https://baike.baidu.com/item/路由表" target="_blank" rel="noopener">路由表</a>。</p>
+<p>3、HSRP配置</p>
+<p><img src="https://t1.picb.cc/uploads/2019/08/17/gNzXsL.png" alt></p>
 	
 	</div>
 	
@@ -342,12 +344,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/17/热备份路由协议/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/08/17/配置rip动态路由/" title="" rel="next">
+			<a href="/2019/08/17/1、静态路由/" title="" rel="next">
 				Next post&raquo;
 			</a>
 			
