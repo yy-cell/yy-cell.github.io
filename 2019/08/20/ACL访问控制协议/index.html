@@ -287,8 +287,8 @@
 
 	Posted on
 
-	<a href="/2019/08/20/配置路由重分布和路由映射表：/" itemprop="url">
-		<time datetime="2019-08-20T09:30:11.108Z" itemprop="datePublished">
+	<a href="/2019/08/20/ACL访问控制协议/" itemprop="url">
+		<time datetime="2019-08-20T10:03:20.700Z" itemprop="datePublished">
 	  		2019-08-20
 	  </time>
 	</a>
@@ -305,8 +305,8 @@
 
 	Updated on
 
-	<a href="/2019/08/20/配置路由重分布和路由映射表：/" itemprop="url">
-		<time datetime="2019-08-20T09:30:11.108Z" itemprop="dateUpdated">
+	<a href="/2019/08/20/ACL访问控制协议/" itemprop="url">
+		<time datetime="2019-08-20T10:03:20.700Z" itemprop="dateUpdated">
 	  		2019-08-20
 	  </time>
 	</a> 
@@ -327,17 +327,46 @@
 
 	<div class="article-content" id="article-content">
 		<hr>
-<h2 id="路由重分布与路由映射表"><a href="#路由重分布与路由映射表" class="headerlink" title="路由重分布与路由映射表"></a>路由重分布与路由映射表</h2><p>路由重分布：<br>给rip设置metric值为3，如果不设置，默认为不可达，就通不了其他的协议<br>R1(config)#router rip<br>R1(config-router)#re<br>R1(config-router)#redistribute sta<br>R1(config-router)#redistribute static me<br>R1(config-router)#redistribute static metric 3<br>给R2配置两个不同协议互通<br>R2(config)#router rip<br>R2(config-router)#redistribute eigrp 1<br>R2(config-router)#default-metric 4<br>R2(config)#router eigrp 1<br>R2(config-router)#redistribute rip metric 1000 100 255 1 1500<br>给R3配置不同协议互通：<br>R3(config)#router eigrp 1<br>R3(config-router)#redistribute rip metric 1000 100 255 1 1500<br>R3(config-router)#distance eigrp 90 150（配置eigrp的默认管理距离，内部90，外部150）</p>
-<p>R3(config)#router ospf 1<br>R3(config-router)#redistribute eigrp 1 metric-type 1 subnets<br>R3(config-router)#redistribute maximum-prefix 100 50（100表示最大条目为100 ，50是表示超过最大路由条目的百分之50开始提示，warning-only表示只是提示，并不会限制充分的路由条目）</p>
-<p>策略路由：<br>一、基于源地址的策略路由配置：</p>
-<p><img src="https://s2.ax1x.com/2019/08/20/mJT44f.png" alt></p>
-<p>配置ACL（配置两条规则）<br>R1(config)#access-list 1 permit 172.16.1.2<br>R1(config)#access-list 2 permit 172.16.1.3<br>配置路由映射表<br>R1(config)#route-map CCNA permit 10             （路由映射表名  10）<br>R1(config-route-map)#match ip address 1         （执行1这个规则）<br>R1(config-route-map)#set ip next-hop 172.16.12.2（设定下一跳端口ip）<br>R1(config-route-map)#exit<br>R1(config)#route-map CCNA permit 20<br>R1(config-route-map)#match ip address 2<br>R1(config-route-map)#set ip next-hop 172.16.21.2<br>应用策略路由<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCNA<br>实验调试：<br>1、查看路由路径(路由追踪)<br>PC2#traceroute 172.16.2.2<br>PC3#traceroute 172.16.2.2<br>2、在R1上显示调试信息<br>R1#debug ip policy<br>PC2：ping 172.16.2.2<br>PC6:ping 172.16.2.2<br>3、显示在哪些接口上应用了策略路由<br>R1#sh ip policy</p>
-<p>二、基于数据包长度的策略路由配置：</p>
-<p><img src="https://s2.ax1x.com/2019/08/20/mJ7raq.png" alt></p>
-<p>配置路由映射表<br>R1(config)#route-map CCNP permit 10<br>R1(config-route-map)#match length 64 100   （设置64-100字节的数据包限制）<br>R1(config-route-map)#set interface s1/0     （指定接口传输数据包）<br>R1(config)#route-map CCNP permit 20<br>R1(config-route-map)#match length 101 1000    （设置101-1000字节数据包）<br>R1(config-route-map)#set interface f0/1          （指定接口）<br>应用策略路由<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCNP<br>R1(config-if)#exit<br>R1(config)#ip local policy route-map CCNP<br>显示定义的所有路由策略及路由策略匹配的情况<br>R1#sh ip route-map CCNP</p>
-<p>三、基于应用的策略路由配置</p>
-<p><img src="https://s2.ax1x.com/2019/08/20/mJ76iV.png" alt></p>
-<p>配置R2的http与telnet访问<br>R2(config)#ip http server<br>R2(config)#line vty 0 4<br>R2(config-line)#no login<br>R2(config-line)#privilege level 15   （设置优先级）<br>配置扩展ACL<br>R1(config)#ip access-list extended HTTP<br>R1(config-ext-nacl)#permit tcp any any eq 80<br>R1(config-ext-nacl)#exit<br>R1(config)#ip access-list extended TELNET<br>R1(config-ext-nacl)#permit tcp any any eq 23<br>配置路由映射表<br>R1(config)#route-map CCIE permit 10<br>R1(config-route-map)#match ip address HTTP<br>R1(config-route-map)#set ip precedence flash<br>R1(config-route-map)#set ip next-hop 172.16.12.2<br>R1(config)#route-map CCIE permit 20<br>R1(config-route-map)#match ip address TELNET<br>R1(config-route-map)#set ip precedence critical<br>R1(config-route-map)#set ip next-hop 172.16.21.2<br>应用路由映射表<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCIE<br>R1(config)#ip local policy route-map CCIE</p>
+<h2 id="ACL访问控制协议"><a href="#ACL访问控制协议" class="headerlink" title="ACL访问控制协议"></a>ACL访问控制协议</h2><p><img src="https://s2.ax1x.com/2019/08/20/mYplLV.png" alt></p>
+<p>案例一：禁止学生宿舍行政楼访问财务室</p>
+<p>编号命名标准ACL:</p>
+<p>禁止学生宿舍网络（后面的是掩码反码）</p>
+<p>Router(config)#access-list 10 deny 192.168.10.0 0.0.0.255</p>
+<p>禁止行政楼访问财务室</p>
+<p>Router(config)#access-list 10 deny host 192.168.20.1</p>
+<p>允许其他所有的访问</p>
+<p>Router(config)#access-list 10 permit any</p>
+<p>进入端口，设置out</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 10 out </p>
+<p>案例二：拒绝学生宿舍访问www服务</p>
+<p>禁止学生宿舍使用tcp协议访问www服务</p>
+<p>Router(config-ext-nacl)#deny tcp 192.168.10.0 0.0.0.255 host 192.168.100.1 eq www</p>
+<p>允许其他的访问</p>
+<p>Router(config-ext-nacl)#peimit ip any any</p>
+<p>进入端口，设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc YY in </p>
+<p>案例三：禁止学生宿舍ping服务器，但是可以访问网站</p>
+<p>禁止学生宿舍ping服务器</p>
+<p>Router(config)#ACCess-list 100 deny icmp 192.168.10.0 0.0.0.255 host 192.168.100.1 echo</p>
+<p>允许其他的访问</p>
+<p>Router(config)#access-list 100 permit ip any any</p>
+<p>进入端口设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 100 in </p>
+<p>案例四：学生宿舍不可以ping服务器，不能用<a href="http://www.gxa.com访问网站，但可以用地址访问网站。" target="_blank" rel="noopener">www.gxa.com访问网站，但可以用地址访问网站。</a></p>
+<p>设置它为扩展型</p>
+<p>Router(config)#ip access-list extended 100</p>
+<p>禁止ping</p>
+<p>Router(config-ext-nacl)#deny icmp 192.168.10.0 0.0.0.255 192.168.100.0 0.0.0.255 echo</p>
+<p>禁止DNS域名访问</p>
+<p>Router(config-ext-nacl)#deny udp 192.168.10.0 0.0.0.255 192.168.100.0 0.0.0.255 eq domain</p>
+<p>允许其他所有访问</p>
+<p>Router(config-ext-nacl)#permit ip any any</p>
+<p>端口设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 100 in</p>
 	
 	</div>
 	
@@ -356,12 +385,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/20/ACL访问控制协议/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/08/20/配置OSPF动态路由/" title="" rel="next">
+			<a href="/2019/08/20/配置路由重分布和路由映射表：/" title="" rel="next">
 				Next post&raquo;
 			</a>
 			
