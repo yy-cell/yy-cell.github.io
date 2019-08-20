@@ -258,6 +258,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -275,9 +287,9 @@
 
 	Posted on
 
-	<a href="/2019/08/17/PVST生成树协议/" itemprop="url">
-		<time datetime="2019-08-17T09:54:57.548Z" itemprop="datePublished">
-	  		2019-08-17
+	<a href="/2019/08/20/配置OSPF动态路由/" itemprop="url">
+		<time datetime="2019-08-20T09:18:23.000Z" itemprop="datePublished">
+	  		2019-08-20
 	  </time>
 	</a>
 	&nbsp;
@@ -293,9 +305,9 @@
 
 	Updated on
 
-	<a href="/2019/08/17/PVST生成树协议/" itemprop="url">
-		<time datetime="2019-08-17T09:54:57.548Z" itemprop="dateUpdated">
-	  		2019-08-17
+	<a href="/2019/08/20/配置OSPF动态路由/" itemprop="url">
+		<time datetime="2019-08-20T09:18:23.000Z" itemprop="dateUpdated">
+	  		2019-08-20
 	  </time>
 	</a> 
 
@@ -314,59 +326,10 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>PVST 生成树协议</p>
-<p>1、什么是PVST</p>
-<p>PVST是Cisco私有的，为每个VLAN构造一棵生成树</p>
-<p>2、PVST在实际中的应用</p>
-<p>配置网络中比较稳定的交换机为根网桥</p>
-<p>利用PVST实现网络的负载分担</p>
-<p>3、PVST的配置</p>
-<p>命令启用生成树：Switch(config)#spanning-tree vlan vlan-list</p>
-<p>设置根网桥：Switch(config)#spanning-tree vlan vlan-list root primary | secondary</p>
-<p>-设置为primary后，优先级变成24576</p>
-<p>-设置为secondary后， 优先级变成28672</p>
-<p>修改网桥的优先级：Switch(config)#spanning-tree vlan vlan-list priority Bridge-priority </p>
-<p>-优先级的值为4096的倍数</p>
-<p>修改端口成本：Switch(config-if)#spanning-tree vlan vlan-list cost cost</p>
-<p>修改端口优先级：Switch(config-if)#spanning-tree vlan vlan-list port-priority priority</p>
-<p>配置上行速链路：Switch(config)#spanning-tree uplinkfast</p>
-<p>配置端口速链路：Switch(config-if)#spanning-tree portfast</p>
-<p>查看生成树的配置：Switch#show spanning-tree</p>
-<p>查看某个VLAN的生成树详细信息：Switch#show spanning-tree vlan vlan-id detail</p>
-<p><strong>三、**</strong>以太网端口聚合**</p>
-<p><strong>1、**</strong>什么是端口聚合？**</p>
-<p>链路聚合又称为端口聚合，端口捆绑，英文名porttrunking。是一种聚合多个物理接口 ( that ) 创建一个逻辑接口。你可以捆扎( bundle ) 八个单独的活动链接到一个信道端口，以提供更高的<strong>带宽</strong>和<strong>冗余</strong>。端口通道也负载平衡这些物理接口上的通信量。只要端口通道中的至少一个物理接口可操作，端口通道就可以保持运行。</p>
-<p><strong>2、**</strong>channel-group** <strong>模式</strong></p>
-<p>PAgP 是 Cisco私有，只能在 Cisco Switch 上设定，PAgP 有两个模式，分別是 Desirable 与 Auto当 PAgP 成功建立 EtherChannel 后，PAgP Message 会继续定时传送去维持 EtherChannel。</p>
-<p>Desirable  Auto</p>
-<p>Desirable    √         √   主动发送PAgP报文</p>
-<p>Auto        √         x   被动发送PAgP报文</p>
-<p>On                        手动设置，需要两边都设置</p>
-<p>LACP 是 IEEE Standard</p>
-<p>Active  Passive</p>
-<p>Active        √         √   主动发送LACP报文</p>
-<p>Passive       √         x    主动接收LACP报文</p>
-<p><strong>3、**</strong>channel-group<strong>**说明</strong></p>
-<p>（1）Cisco最多允许EtherChannel绑定8个端口；如果是百兆网络，总带宽可达1.6Gbit/s；如果是千兆网络，总带宽可达16Gbit/s。</p>
-<p>（2）EtherChannel不支持10M端口；</p>
-<p>（3）EtherChannel编号只在本地有效，链路两端的编号可以不一样；</p>
-<p>（4）EtherChannel默认使用PAgP协议；</p>
-<p>（5）EtherChannel默认情况下是基于源MAC地址的负载平衡；</p>
-<p>（6）一个EtherChannel内所有的端口都必须具有相同的端口速率和双工模式，LACP只能是全双工模式；</p>
-<p>（7）channel-group接口会自动继承最小物理接口，或最先配置的接口模式；</p>
-<p>（8）cisco的交换机不仅可以支持第二层EtherChannel,还可以支持第三层EtherChannel。</p>
-<p><strong>4、配置端口聚合</strong></p>
-<p>Switch(config)#int port-channel 1</p>
-<p>Switch(config-if)#switchport mode trunk</p>
-<p>Switch(config)#int range f0/1-2</p>
-<p>Switch(config-if-range)#channel-group 1 mode on</p>
-<p><strong>5、配置流量均衡</strong></p>
-<p>Switch(config)#int f0/1</p>
-<p>Switch(config-if)#spanning-tree vlan 10 port-priority 16</p>
-<p>Switch(config-if)#spanning-tree vlan 20 port-priority 32</p>
-<p>Switch(config)#int f0/2</p>
-<p>Switch(config-if)#spanning-tree vlan 10 port-priority 32</p>
-<p>Switch(config-if)#spanning-tree vlan 20 port-priority 16</p>
+		<hr>
+<h2 id="OSPF路由协议（链路状态"><a href="#OSPF路由协议（链路状态" class="headerlink" title="OSPF路由协议（链路状态"></a>OSPF路由协议（链路状态</h2><p>）<br>工业标准，工作在网络层<br>组播地址：224.0.0.5 224.0.0.6<br>OSPF概述：<br>通过交换Hello数据包来建立邻居关系<br>以传播LSA代替路由表更新<br>      链路：路由器接口<br>      状态：描述接口以及他与邻居路由器的关系<br>  将LSA    泛洪到所有区域的OSPF路由器，而不是单独的一个<br>  分为三张表：<br>            邻居表<br>            数据库<br>            路由表<br>OSPF分层路由：基于端口划分区域<br>主干路由器（BR）<br>区域边界路由器（ABR）<br>自治系统边界路由器（ASBR）<br>划分区域的好处：<br>减少路由表的路由条目<br>拓扑发生改变时，只影响本区域的数据库<br>每个30分钟泛数据库信息（周期与触发更新）只在本区域泛洪<br>使用OSPF配置负载均衡：<br>默认情况下，最多可在路由表中加入四条等价路径：<br>     可以最多配置16条路径<br>    (config-router)# maximum-paths<value><br>    可以更改特殊链路的开销以确保路径等价于负载均衡：<br>    (config-if)#ip ospf cost <vlaue><br>配置身份认证：<br>   （1）配置明文认证<br>        R1(config-if)#ip ospf authentication-key ccie   设置明文密码，两端口密码要一致<br>        R1(config-if)#ip ospf authentication     开启认证<br>   （2）配置密码认证<br>        R1(config-if)#ip ospf message-digest-key 1 md5 ccie<br>        R1(config-if)#ip ospf authentication<br>   （3）配置区域认证<br>        R1(config-if)#ip ospf message-digest-key 1 md5 ccie<br>        R1(config-router)#area 1 authentication message-digest<br>        区域明文认证<br>        R1(config-if)#ip ospf authentication-key ccie<br>        R1(config-router)#area 1 authentication<br>查看是否配置ospf:sh ip protocols<br>查看邻居表：sh ip ospf neighbor<br>查看链路状态数据库（拓朴表）：sh ip ospf database<br>查看路由表：sh ip route /sh ip route ospf<br>查看ospf进程及相关信息：sh ip ospf<br>查看运行ospf接口的信息：sh ip ospf interface f0/0<br>路由汇总：<br>R2(config-router)#area 1 range 172.16.0.0 255.255.255.252<br>路由重分配<br>R3(config)#router ospf 1<br>R3(config-router)#redistribute eigrp 1 subnets 默认为 metric-type 2  OE2,Metric为20，不累加<br>R3(config-router)#redistribute eigrp 1 metric-type 1 metric 100 subnets  metric-type 1  OE1<br>R3(config)#router eigrp 1<br>R3(config-router)#redistri bute ospf 1 metric 1000 100 255 1 1500（带宽 延迟 可靠性 负载 MTU（最大传输单元））<br>配置外部自治系统路由汇总<br>R3(config)#router ospf 1<br>R3(config-router)#summary-address 192.168.0.0 255.255.252.0<br>在R2上看路由表，会发现有一条路由为：<br>172.16.0.0/22 is a summary, 00:12:06, Null0<br>为避免一路，请使用以下命令：<br>R2(config-router)#no discard-route<br>OSPF的路由类型：<br>O    ：域内路由<br>O/A  ；域间路由<br>OE1  :域外路由  会累加METRIC值<br>OE2  :域外路由，不累加METRIC值默认20，由外部重分布进来默认使用OE2</vlaue></value></p>
+<p>最短路径优先算法（SPF Calculation）<br>Cost=108/BW（b/s)<br>metric值=所有目的地址到达本地路由器的入接口的cost值之和<br>metric值=所有本地路由器到达目的地址的路由器的出接口的cost值之和<br>也可以使用命令sh ip ospf interface loopback 0 查看接口的cost值 </p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mJhDVf.png" alt></p>
 	
 	</div>
 	
@@ -385,12 +348,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/20/配置OSPF动态路由/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/08/17/热备份路由协议/" title="" rel="next">
+			<a href="/2019/08/17/PVST生成树协议/" title="" rel="next">
 				Next post&raquo;
 			</a>
 			
