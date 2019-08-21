@@ -287,8 +287,8 @@
 
 	Posted on
 
-	<a href="/2019/08/21/PPP点到点协议/" itemprop="url">
-		<time datetime="2019-08-21T10:47:51.926Z" itemprop="datePublished">
+	<a href="/2019/08/21/QOS服务质量配置/" itemprop="url">
+		<time datetime="2019-08-21T10:54:39.418Z" itemprop="datePublished">
 	  		2019-08-21
 	  </time>
 	</a>
@@ -305,8 +305,8 @@
 
 	Updated on
 
-	<a href="/2019/08/21/PPP点到点协议/" itemprop="url">
-		<time datetime="2019-08-21T10:47:51.926Z" itemprop="dateUpdated">
+	<a href="/2019/08/21/QOS服务质量配置/" itemprop="url">
+		<time datetime="2019-08-21T10:54:39.418Z" itemprop="dateUpdated">
 	  		2019-08-21
 	  </time>
 	</a> 
@@ -326,8 +326,12 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="PPP点到点协议"><a href="#PPP点到点协议" class="headerlink" title="PPP点到点协议"></a>PPP点到点协议</h1><p><img src="https://s2.ax1x.com/2019/08/21/mUDcWR.png" alt></p>
-<p>pap与 chap配置：<br>R1与R2之间配置pap认证：<br>R1(config)#username YY password ccie                   设置本地账户和密码<br>R1(config)#int s2/0                                    进入端口<br>R1(config-if)#encapsulation ppp                        开启ppp封装<br>R1(config-if)#ppp authentication pap                   ppp采取pap认证方式<br>R2(config)#int s2/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp pap sent-username YY password  ccie  发送账户和密码进行认证<br>chap的三次握手：<br>R2发送一个随机值给R1，R1收到后将随机值和chap认证中配置的密码cisco进行hash运算，<br>然后将自己chap配置的用户名ccie和hash值发给R2，R2检查用户名是否为自己配置的ccie，<br>并将自己的发送的随机值和自己配置的认证密码cisco做hash运算，结果一直则说明R1认证成功。<br>R2与R3配置chap双向项认证：<br>R2(config)#username R3 password  ccie<br>R2(config-if)#int s3/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp authentication  chap<br>R3(config)#username R2 PAssword ccie<br>R3(config)#int s2/0<br>R3(config-if)#encapsulation ppp<br>R3(config-if)#ppp authentication chap<br>R2与R3配置单项向认证<br>R2(config)#username R3 password  ccie<br>R2(config-if)#int s3/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp authentication  chap<br>R3(config)#int s2/0<br>R3(config-if)#encapsulation ppp<br>在chap认证中如果你设置的认证双方的用户名不是对方的设备名，那麽就要在最后就上这两个语句<br>R3(config-if)#ppp chap hostname 加上用户名<br>R3(config-if)#ppp chap password 加上用户密码</p>
+		<h1 id="QOS服务质量配置"><a href="#QOS服务质量配置" class="headerlink" title="QOS服务质量配置"></a>QOS服务质量配置</h1><p><img src="https://s2.ax1x.com/2019/08/21/mUre7F.png" alt></p>
+<p>QOS（（服务质量）是网络的一种安全机制, 是一种用于解决网络延迟和阻塞等问题的技术，包括传输的带宽、传送的时延、数据的丢包率等。在网<br>络中可以通过保证传输的带宽、降低传送的时延、降低数据的丢包率以及时延抖动等措施来提高服务质量。</p>
+<p>CBWFQ配置：（CBWFQ：基本类型的加权公平排队。CBWFQ能根据用户定义识别出某种类流，并为该条流分配一定的权重）<br>Router(config)#class-map http_ftp  //创建名为http_ftp分类表，并进入分类表模式<br>Router(config-cmap)#match protocol http //匹配http协议<br>Router(config-cmap)#match protocol ftp  //匹配ftp协议建立<br>Router(config)#policy-map duilie //创建名为duilie的策略表，并进入策略表模式<br>Router(config-pmap)#class http_ftp //建立名为http_ftp分类表<br>Router(config-pmap-c)#bandwidth 512 //设置带宽为512<br>Router(config-pmap-c)#exit<br>Router(config-pmap)#class class-default  //默认类<br>Router(config-pmap-c)#fair-queue      //设置端口队列<br>Router(config-pmap-c)#int f0/1<br>Router(config-if)#service-policy output duilie 应用队列策略<br>Router#show policy-map   //查看CBWFQ的配置情况</p>
+<p>PQ的配置：（PQ：优先权排队。可以配置高（High）、中（Middle）、普通（Normal）、低（Low）四种通信优先级，优先权级别高的通信总会比优先权级别低的通信提前得到服务。）<br>使用PQ设置来保证web服务优先传输，ftp服务 优先级设置为最低：<br>Router(config)#ip access-list extended 101<br>Router(config-ext-nacl)#permit tcp any any eq www<br>Router(config)#ip access-list extended 102<br>Router(config-ext-nacl)#permit tcp any any eq ftp<br>Router(config)#priority-list 1 protocol ip high list 101  //根据协议类型排队的优先级<br>Router(config)#priority-list 1 protocol ip low list 102<br>Router(config-if)#priority-group 1 将优先级列表应用到接口上<br>Router#show queueing   //查看PQ配置情况</p>
+<p>CQ的配置：<br>设置ftp服务的优先级发送在www服务前发送<br>Router(config)#access-list 102 permit tcp any any eq ftp<br>Router(config)#access-list 103 permit tcp any any eq www<br>Router(config)#queue-list 1 protocol ip 1 list 102<br>Router(config)#queue-list 1 protocol ip 2 list 103<br>Router(config-if)#priority-group 1<br>Router#show queueing<br>Current custom queue configuration:</p>
+<p>List Queue Args<br>1 1 protocol ip list 102<br>1 2 protocol ip list 103<br>Current random-detect configuration:</p>
 	
 	</div>
 	
@@ -346,12 +350,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/08/21/QOS服务质量配置/" title="" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/08/21/NAT和PAT/" title="" rel="next">
+			<a href="/2019/08/21/PPP点到点协议/" title="" rel="next">
 				Next post&raquo;
 			</a>
 			
