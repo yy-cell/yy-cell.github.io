@@ -1,739 +1,582 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="YY">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>YY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="YY">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="YY">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YY">
+  
+    <link rel="alternative" href="/atom.xml" title="YY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
     
     
-    
-    
-    
-    
-    <title>YY</title>
-    <link href="”http://yoursite.com“" rel="”prefetch”">
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/aos.css">
-<link rel="stylesheet" href="/css/style.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/aos.js"></script>
-    <script src="/js/highslide/highslide-full.min.js"></script>
-    <link rel="stylesheet" href="/js/highslide/highslide.css">
-    <style type="text/css">
-        @media (max-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-                background: url('/imgs/xsbg.gif');
-                background-attachment: fixed;
-            }
-        }
-    </style>
-    
-    <!--<script type="text/javascript">
-      if (document.images) {
-        var avatar = new Image();
-        avatar.src = '/imgs/avatar.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
-        var previewsPreLoad = []
-        for(var i = 0; i < length; i++) {
-          previewsPreLoad.push(new Image())
-          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
-        }
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
       }
-    </script>-->
+  </script>
 </head></html>
 <body>
-    <!-- 背景轮播图功能 -->
-    <section class="hidden-xs">
-    <ul class="cb-slideshow">
-        <li><span>天若</span></li>
-        <li><span>有情</span></li>
-        <li><span>天亦老</span></li>
-        <li><span>我为</span></li>
-        <li><span>长者</span></li>
-        <li><span>续一秒</span></li>
-    </ul>
-</section>
-    <!-- 欧尼酱功能, 谁用谁知道 -->
-    
-    <header class="navbar navbar-inverse" id="gal-header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target=".bs-navbar-collapse"
-                    aria-expanded="false">
-                <span class="fa fa-lg fa-reorder"></span>
-            </button>
-            <a href="http://yoursite.com">
-                
-                <style>
-                    #gal-header .navbar-brand {
-                        height: 54px;
-                        line-height: 24px;
-                        font-size: 28px;
-                        opacity: 1;
-                        background-color: rgba(0,0,0,0);
-                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">YY</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
                     }
-                </style>
-                <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">YY</div>
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">YY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
                 
             </a>
-        </div>
-        <div class="collapse navbar-collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav" id="menu-gal">
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">YY</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
                 
+                    <li><a href="/archives/">所有文章</a></li>
                 
-                <li class="">
-                    <a href="/">
-                        <i class="fa fa-home"></i>首页
-                    </a>
-                </li>
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
                 
+                    <li><a href="/categories/digital">玩转数码</a></li>
                 
+                    <li><a href="/categories/algorithm">算法学习</a></li>
                 
-                <li class="">
-                    <a href="/archives">
-                        <i class="fa fa-archive"></i>归档
-                    </a>
-                </li>
+                    <li><a href="/about/">关于我</a></li>
                 
-                
-                
-                
-                <li class="">
-                    <a href="/categories">
-                        <i class="fa fa-list"></i>分类
-                    </a>
-                </li>
-                
-                
-                
-                
-                
-                <li class="">
-                    <a href="/tags">
-                        <i class="fa fa-tags"></i>标签
-                    </a>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/about">
-                        <i class="fa fa-user"></i>关于我
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</header>
-    <div id="gal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 gal-right" id="mainstay">
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
                     
-<div class="alert well fade in" id="gal-issue" role="alert">
-    <!-- TODO 添加关闭公告框功能 -->
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <!-- 这里自行配置公告内容 -->
-    这里是公告内容
-    <br>
-    配置相关说明请看<strong>_config.yml</strong>
-    <!-- 自行配置公告内容结束 -->
-</div>
-
-<div id="article-list">
-     
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/配置rip动态路由/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/配置rip动态路由/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/配置rip动态路由/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview1.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/配置rip动态路由/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/配置rip动态路由/">
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/配置rip动态路由/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/配置EIGRP/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/配置EIGRP/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/配置EIGRP/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview1.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/配置EIGRP/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/配置EIGRP/">
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/配置EIGRP/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/OSI参考七层模型：/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/OSI参考七层模型：/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/OSI参考七层模型：/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/OSI参考七层模型：/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/OSI参考七层模型：/">
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
                     
-                    <img src="/imgs/preview/preview3.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/OSI参考七层模型：/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-</div>
-<!-- 前方最多7个 < 1 2 3 4 5 6 -->
-<!-- 前方超过第7页则分为 < 1 ... (n - 3) (n - 2) (n - 1) n, 此时前面为固定的6个 -->
-
-<!-- 后方最多8个 (n + 1) 到 (n + 7) > -->
-<!-- 如果末页和当前页相差超过7, 此时后面为固定的6个, (n + 1) (n + 2) (n + 3) ... total > -->
-
-
-
-<div id="gal-pagination" class="clearfix">
-    <ul class="pagination pagination-gal pull-right">
-        
-        <li class="prev">
-            <a href="/">«</a>
-        </li>
-        
-        
-        
-        <li>
-            <a href="/">1</a>
-        </li>
-        
-        
-        <li class="current">
-            <span>2</span>
-        </li>
-        
-        
-        
-        
-    </ul>
-</div>
-
                 </div>
-                <aside class="col-md-4 gal-left" id="sidebar">
-    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
-<aside id="sidebar-search">
-    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <form class="form-inline clearfix" id="search-form" method="get"
-              action="/search/index.html">
-            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
-            <button class="btn btn-danger btn-gal" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
+            </nav>
+        </header>
     </div>
-</aside>
-    <aside id="sidebar-author">
-    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
-        <div class="panel-heading" style="text-align: center">
-            <i class="fa fa-quote-left"></i>
-            YY
-            <i class="fa fa-quote-right"></i>
-        </div>
-        <div class="author-panel text-center">
-            <img src="/imgs/avatar.jpg" width="140" height="140"
-                 alt="个人头像" class="author-image">
-            <p class="author-description"></p>
-        </div>
-    </div>
-</aside>
-    
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
-    </div>
-</aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
-    
-    
-    <aside id="sidebar-recent_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            近期文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/QOS服务质量配置/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/PPP点到点协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/NAT和PAT/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/ACL访问控制协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置路由重分布和路由映射表：/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置OSPF动态路由/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/PVST生成树协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/热备份路由协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/1、静态路由/"></a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="sidebar-rand_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            随机文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/NAT和PAT/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/ACL访问控制协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/OSI参考七层模型：/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/PVST生成树协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/PPP点到点协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/QOS服务质量配置/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/热备份路由协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/配置EIGRP/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置OSPF动态路由/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/配置rip动态路由/"></a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="gal-sets">
-        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-            <ul class="nav nav-pills pills-gal">
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-配置rip动态路由" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/配置rip动态路由/" class="article-date">
+      <time datetime="2019-08-17T09:02:51.707Z" itemprop="datePublished">2019-08-17</time>
+</a>
 
-                
-                <li>
-                    <a href="/page/2/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
-                </li>
-                
-                
-                <li>
-                    <a href="/page/2/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
-                </li>
-                
-                
-                <li>
-                    <a href="/page/2/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-                
-            </ul>
-            <div class="tab-content">
-                
-                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
-    
-</div>
-                
-                
-                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
-    
-    <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
-    </li>
-    
-</div>
-                
-                
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
-    </li>
-    
-    <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
-    </li>
-    
-</div>
-                
-            </div>
-        </div>
-    </aside>
-    
-</aside>
-            </div>
-        </div>
     </div>
-    <footer id="gal-footer">
-    <div class="container">
-        Copyright © 2018 YY Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>RIP动态路由配置</strong></p>
+<p>(1) 使用 no ip route 命令，来删除路由器上已配置的任一静态路由或默认路由。下面就是一个 </p>
+<p>示例，它给出了在 Lab_A路由器上删除静态路由的操作: </p>
+<p>Lab_A#config t </p>
+<p>Lab_A(config)#no ip route 172.16.30.0 255.255.255.0 </p>
+<p>172.16.20.2 </p>
+<p>Lab_A(config)#no ip route 172.16.40.0 255.255.255.0 </p>
+<p>172.16.20.2 </p>
+<p>为路由器 Lab_B和 Lab_C 执行同样的操作。验证目前路由选择表中只存在直接相连的网络。 </p>
+<p>(2) 清除了静态路由和默认路由之后，在路由器 Lab_A 上通过输入 config t进入配置模式。 </p>
+<p>(3) 通过输入router rip 并按下回车键配置路由器，让它使用 RIP 路由选择协议，如下所示: </p>
+<p>config t </p>
+<p>router rip </p>
+<p>(4) 为需要进行通告的网络添加网络号。由于路由器 Lab 有两个接口分别位于两个不同的网络 </p>
+<p>中，因此你必须使用每个接口所在网络的网络 ID 完成网络声明。另外，你也可以使用这些网络的一 </p>
+<p>个汇总，使用一个共同的声明，从而使路由选择表最小化。由于这两个网络分别是 172.16.10.0/24 </p>
+<p>和172.16.20.0/24 ，网络汇总 172.16.0.0 将同时包含这两个子网。所以，要完成配置可以输入 network </p>
+<p>172.16.0.0 并接下回车键。 </p>
+<p>(5) 按下 Ctrl+Z，退出配置模式。</p>
+<p>(6) 路由器Lab_B Lab_C 上的接口分别属于 172.16.20.0/24和172.16 .3 0.0/24 网络，因此同样的 </p>
+<p>汇总网络声明也是可以正常工作的。输入相同的命令，如下所示: </p>
+<p>Config t </p>
+<p>Router rip </p>
+<p>network 172.16.0.0 </p>
+<p>(7) 通过输入下列命令，验证阳 在每个路由器上的运行情况: </p>
+<p>show ip protocols </p>
+<p>(应能表明RIP正在本路由器上运行) </p>
+<p>show ip route </p>
+<p>(应该给出当前使用的路由，并且在路由的左侧显示字符 R) </p>
+<p>show running-config or show run </p>
+<p>(应能表明 RIP 当前正在运行，并且网络正被通告) </p>
+<p>(8) 通过输入 copy run start或copy running-config startup-config 命令，并按下回车键， </p>
+<p>保存配置。 </p>
+<p>(9) 通过 ping 所有的远程网络和主机验证此网络的配置情况。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-配置EIGRP" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/配置EIGRP/" class="article-date">
+      <time datetime="2019-08-17T08:52:46.790Z" itemprop="datePublished">2019-08-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>配置EIGRP:</p>
+<p>#router eigrp 10</p>
+<p>#network 13.1.1.0 0.0.0.255</p>
+<p>#network 34.1.1.0 0.0.0.255</p>
+<p>#no auto-summary<br>配置非等价均衡负载;<br>计算V值<br>P 44.1.1.0/24, 1 successors, FD is 158720<br>         via 13.1.1.2 (158720/156160), FastEthernet0/1<br>         via 12.1.1.2 (20642560/156160), Serial0/1/0<br>         V=20642560/158720（取整数）<br>配置非等价负载均衡<br>R1(config)#router eigrp 10<br>R1(config-router)#variance 131<br>EIFRP支持MD5身份认证：基于链路（在每个网段的两个端口上都要设置）<br>1.创建密钥链，它是一组可能的密钥（密码）<br>2.对每个密钥分配密钥ID<br>3.标识密钥<br>4.（可选）指定密钥的有效期<br>5.在接口上启用MD5身份验证<br>6.指定接口使用的密钥链<br>R3(config)#key chain YY1<br>R3(config-keychain)#key 1<br>R3(config-keychain-key)#key-string ccie<br>R3(config)#int f0/1<br>R3(config-if)#ip authentication mode eigrp 10 md5<br>R3(config-if)#ip authentication key-chain eigrp 10 YY1<br>EIGRP路由手动汇总：<br>R3(config)#int f0/1<br>R3(config-if)#ip summary-address eigrp 10 12.1.0.0 255.255.0.0<br>配置被动接口：</p>
+<p>#router eigrp 10</p>
+<p>#passive-interface loopback 1</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-OSI参考七层模型：" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/OSI参考七层模型：/" class="article-date">
+      <time datetime="2019-08-17T08:41:14.169Z" itemprop="datePublished">2019-08-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>OSI参考七层模型：<br>应用层：提供用户界面<br>表示层：保护数据进行加密等  ：数据加密压缩转换服务<br>会话层：将不同应用程序的数据分离  ：对话控制<br>传输层：提供可靠或者不可靠的传输，在重传前进行纠错（tcp协议udp协议）：端到端连接  数据表示为字段<br>网络层：提供逻辑地址，路由器使用他们来选择路径（IP协议） ：路由选择                数据表示为组<br>数据链路层：将分组拆分为字节，并将字节组合成为帧，使用MAC地址提供介质错误检测，但不纠错（交换机）（ppp协议点对点协议，fr帧中继协议） ：成帧<br>物理层：在设备之间传输比特，指定电平电缆速度和电缆针脚（集线器）   ：物理拓扑     数据表示为比特</p>
+<p>1、数据的封装与解封装<br>上层数据<br>TCP报头（源端口 目标端口）上层数据<br>IP报头（源IP目标IP）TCP报头（源端口 目标端口）上层数据<br>LLC报头 IP报头（源IP目标IP）TCP报头（源端口 目标端口）上层数据<br>MAC报头 LLC报头（llc 报头是数据封装时在数据链路层的附加标识） IP报头（源IP目标IP）TCP报头（源端口 目标端口）上层数据<br>TCP:提供可靠的连接服务，采用三次握手建立连接：<br>     第一个是“连接协定”数据段，用于请求同步<br>     第二个接下来的数据段确认请求，并且在主机之间确定连接参数（即规则）。这些数据段也请求同步接收方的排序，以建立双向连接<br>     第三：最后一个也是进行确认，通知目标主机连接协定已被接受且连接已建立<br>    第一：发送方SYN<br>    第二：接收方SYN/ACK<br>    第三：发送方ACK<br>    连接已建立<br>    网络架构三层模型<br>    核心层：唯一目标是尽可能快的交换数据流 （少做限制）<br>    汇聚层：进行网络互连<br>    接入层：<br>DOD模型：是OSI模型的精简版，只有四层                                             TCP/IP四层模型<br>          进程/应用层：  （是七层模型中的上三层）                                 应用层<br>          主机到主机层：（为七层osi模型的传输层）                                 运输层<br>          因特网层：  （为七层模型的中的网络层）                                  网际层<br>          网络接入层：（为七层模型中的数据链路层，和物理层）                      网络接口层<br>DOD模型：各层对应的协议<br>        进程/应用层： Telent   FTP LPD SNMP<br>                       TFTP    SMTP  NFS   XWindow<br>        主机到主机层：TCP   UDP<br>        因特网层：   ICMP ARP  RARP  IP<br>        网络接入层： 以太网  快速以太网  令牌环  FDDI<br>Telent:专司终端模拟，远程访问协议，本质就是让远程客户端看起来根与本地直接连接的终端相似<br>FTP:文件传输协议，既是协议，可供程序使用，作为程序，可直接手工执行与文件相关的任务，可用anonymous避开身份验证<br>TFTP:是FTP的简化版,使用简单速度快 功能没FTP丰富，没有提供目录浏览功能，除了接受发送文件外啥也不能做，不需要身份验证，所有不安全，支持网站少<br>NFS:是一种致力于文件共享的协议（及不同的系统之间可以访问相同的文件）<br>SMTP:简单邮件传输协议  用于发送电子邮件，而POP3或者IMAP 用于接收文件<br>POP：邮局协议 提供了一种对到来邮件进行存储的机制<br>IMAP4:因特网消息访问协议，让你能够控制邮件的下载方式，因此使用它可获得亟需的安全性<br>TLS：TLS)及其前身 SSL都是加密协议，非常适合用于确保在线数据传输的安全<br>SIP:是一种非常流行的信令胁议，用于建立和拆除多媒体通信会话<br>RTP:是一种分组格式标准，用于通过因特网传输语音和视频<br>LDP:用于共享打印机,<br>X Window:为客户端/服务器操作设计的 是一种编写基于 GUI(图形用户界面)的客户端/服务器应用程序的协议。其基本思想是，让运行在 台计算机上的客户端程序能<br>够通过窗口服务器显示另一台计算机的内容<br>SNMP：简单网络管理协议，收集并操作有价值的网络信息<br>SSH：安全外壳 (SSH) 协议通过标准 TCPIIP 连接建立安全的 Telnet 会话，用于执行如下操作:登录系统、在远程系统中运行程序以及在系统间传输文件等。<br>HTTP：HTTP超文本传输协议用于管理 Web 浏览器和 Web 服务器之间的通信<br>HTTPS：安全超文本传输协议，使用 SSL（安全套接字层）<br>NTP:用于将计算机时钟与标准时间源(通常是原子钟)同步<br>NNTP:网络新闻传输协议<br>SCP；安全复制协议，首先在发送主机和接收主机之间建立一条安全的加密连接，并一直保持这种状态，直到文件传输完毕<br>LDAP：轻量级目录访问协议<br>IGMP：因特网组管理协议，是一种用于管理 IP 组播会话的TCP/IP 协议<br>LPR：LPR (行式打印机)和 LPD (Line Printer Daemon ，行式打印机守护进程)来完成打印作业。<br>DNS：域名服务，解析主机名<br>DHCP/BootP：动态主机配置协议，给主机分配 IP 地址<br>            DHCP BootP差别在于， BootP 给主机分配田地址，但必须手工将主机的硬件地址输入到 BootP表中。你可将 DHCP 视为动态的 BootP<br>            BootP也可用于发送操作系统，让主机使用它启动，而 DHCP 没有这样的功能。<br>DHCP 服务器和客户端之间的4次交互：<br>(1) DHCP 客户端广播一条 DHCP 发现消息，旨在寻找 DHCP 服务器(端口 67 );<br>(2) 收到 DHCP 发现消息的 DHCP 服务器向主机发回一条单播 DHCP 提议消息;<br>(3) 客户端向服务器广播一条 DHCP 请求消息，请求提议的 IP 地址和其他信息:<br>(4) 服务器以单播方式发回一条 DHCP 确认消息，完成交互。<br>DHCP 冲突：就是两台主机使用了相同的IP地址<br>          1、DHCP服务器ping地址池中的IP如果没有应答，那么DHCP 就认为该地址未被分配<br>          2、主机也可以广播自己的地址<br>          3、主机也可以使用免费ARP来帮助避免地址重复，DHCP 客户端在本地 LAN或者VLAN 中发送ARP广播，并要求解析分配新给它的地址，从而将冲突消灭在萌芽状态。<br>APIPA:自动私有 IP编址,APIPA 使用的 地址范围为169.254.0.1-169.254.255.254 ，客户端还会给自己配置默认的 类子网掩码一-255.255.0.0<br>     如果在拥有DHCP服务器的公司网络中出现了这一范围的IP地址，那么说明该DHCP客户端不正常，或者是服务器停止运行或者网络问题不可达。<br>主机到主机层协议：tcp udp<br> tcp 将来自应用程序的大型数据块经行划分成为数据段，并且将其标上编号，让接收者按照顺序排列数据块，完成传送后，发送者会等待接收者的确认后，并重新传送未的到确认的数据段<br> tcp创建的虚电路即是三次握手，面向连接。<br> TCP:是一种可靠的精确协议，采用全双工模式，面向连接。<br> UDP：就是TCP的一个简化版，适用于不需要可靠传输的信息<br>      不建立虚电路，也成为无连接协议<br>TCP与UDP区别<br>                TCP                       UDP<br>                排序                      不排序<br>                可靠                      不可靠<br>                面向连接                  无连接<br>                虚电路                    低开销<br>                确认                      不确认<br>                使用窗口技术控制流量      不使用窗口技术或其他流量控制方式<br>            使用tcp的服务：FTP  HTTP Telent SMTP<br>            使用udp的服务：DHCP SNMP TFTP<br>TCP UDP 必须使用端口号才能与上层通信  （端口号小于1024的为知名端口号）<br>常见应用层端口号：<br>                 TCP: Telent 23; SMTP 25;HTTP 80;FTP20 21;DNS 53;HTTTPS 443;SSH 22;POP3 110;NTP 123;IMQP4 143;<br>                 UDP:SNMP 161;TFTP 69;BootPS/DHCP 67</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 YY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
 </footer>
 
-<!-- 回到顶端 -->
-<div id="gal-gotop">
-    <i class="fa fa-angle-up"></i>
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
 </div>
-</body>
-<script src="/js/activate-power-mode.js"></script>
 <script>
-
-    // 配置highslide
-	hs.graphicsDir = '/js/highslide/graphics/'
-    hs.outlineType = "rounded-white";
-    hs.dimmingOpacity = 0.8;
-    hs.outlineWhileAnimating = true;
-    hs.showCredits = false;
-    hs.captionEval = "this.thumb.alt";
-    hs.numberPosition = "caption";
-    hs.align = "center";
-    hs.transitions = ["expand", "crossfade"];
-    hs.lang.number = '共%2张图, 当前是第%1张';
-    hs.addSlideshow({
-      interval: 5000,
-      repeat: true,
-      useControls: true,
-      fixedControls: "fit",
-      overlayOptions: {
-        opacity: 0.75,
-        position: "bottom center",
-        hideOnMouseOut: true
-      }
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
     })
+</script>
 
-    // 初始化aos
-    AOS.init({
-      duration: 1000,
-      delay: 0,
-      easing: 'ease-out-back'
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
     });
-
 </script>
-<script>
-	POWERMODE.colorful = 'true';    // make power mode colorful
-	POWERMODE.shake = 'true';       // turn off shake
-	// TODO 这里根据具体情况修改
-	document.body.addEventListener('input', POWERMODE);
-</script>
-<script>
-    window.slideConfig = {
-      prefix: '/imgs/slide/background',
-      ext: 'jpg',
-      maxCount: '6'
-    }
-</script>
-<script src="/js/hs.js"></script>
-<script src="/js/blog.js"></script>
 
 
-
+  </div>
+</body>
 </html>

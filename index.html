@@ -1,1264 +1,1046 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="YY">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>YY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="YY">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="YY">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YY">
+  
+    <link rel="alternative" href="/atom.xml" title="YY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
     
     
-    
-    
-    
-    
-    <title>YY</title>
-    <link href="”http://yoursite.com“" rel="”prefetch”">
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/aos.css">
-<link rel="stylesheet" href="/css/style.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/aos.js"></script>
-    <script src="/js/highslide/highslide-full.min.js"></script>
-    <link rel="stylesheet" href="/js/highslide/highslide.css">
-    <style type="text/css">
-        @media (max-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-                background: url('/imgs/xsbg.gif');
-                background-attachment: fixed;
-            }
-        }
-    </style>
-    
-    <!--<script type="text/javascript">
-      if (document.images) {
-        var avatar = new Image();
-        avatar.src = '/imgs/avatar.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
-        var previewsPreLoad = []
-        for(var i = 0; i < length; i++) {
-          previewsPreLoad.push(new Image())
-          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
-        }
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
       }
-    </script>-->
+  </script>
 </head></html>
 <body>
-    <!-- 背景轮播图功能 -->
-    <section class="hidden-xs">
-    <ul class="cb-slideshow">
-        <li><span>天若</span></li>
-        <li><span>有情</span></li>
-        <li><span>天亦老</span></li>
-        <li><span>我为</span></li>
-        <li><span>长者</span></li>
-        <li><span>续一秒</span></li>
-    </ul>
-</section>
-    <!-- 欧尼酱功能, 谁用谁知道 -->
-    
-    <header class="navbar navbar-inverse" id="gal-header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target=".bs-navbar-collapse"
-                    aria-expanded="false">
-                <span class="fa fa-lg fa-reorder"></span>
-            </button>
-            <a href="http://yoursite.com">
-                
-                <style>
-                    #gal-header .navbar-brand {
-                        height: 54px;
-                        line-height: 24px;
-                        font-size: 28px;
-                        opacity: 1;
-                        background-color: rgba(0,0,0,0);
-                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">YY</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
                     }
-                </style>
-                <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">YY</div>
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">YY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
                 
             </a>
-        </div>
-        <div class="collapse navbar-collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav" id="menu-gal">
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">YY</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
                 
+                    <li><a href="/archives/">所有文章</a></li>
                 
-                <li class="current">
-                    <a href="/">
-                        <i class="fa fa-home"></i>首页
-                    </a>
-                </li>
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
                 
+                    <li><a href="/categories/digital">玩转数码</a></li>
                 
+                    <li><a href="/categories/algorithm">算法学习</a></li>
                 
-                <li class="">
-                    <a href="/archives">
-                        <i class="fa fa-archive"></i>归档
-                    </a>
-                </li>
+                    <li><a href="/about/">关于我</a></li>
                 
-                
-                
-                
-                <li class="">
-                    <a href="/categories">
-                        <i class="fa fa-list"></i>分类
-                    </a>
-                </li>
-                
-                
-                
-                
-                
-                <li class="">
-                    <a href="/tags">
-                        <i class="fa fa-tags"></i>标签
-                    </a>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/about">
-                        <i class="fa fa-user"></i>关于我
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</header>
-    <div id="gal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 gal-right" id="mainstay">
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
                     
-<div class="alert well fade in" id="gal-issue" role="alert">
-    <!-- TODO 添加关闭公告框功能 -->
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <!-- 这里自行配置公告内容 -->
-    这里是公告内容
-    <br>
-    配置相关说明请看<strong>_config.yml</strong>
-    <!-- 自行配置公告内容结束 -->
-</div>
-
-<div id="article-list">
-     
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">21</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/21/QOS服务质量配置/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/21/QOS服务质量配置/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/21/QOS服务质量配置/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview4.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/21/QOS服务质量配置/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-21
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/21/QOS服务质量配置/">
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/21/QOS服务质量配置/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">21</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/21/PPP点到点协议/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/21/PPP点到点协议/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/21/PPP点到点协议/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview4.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/21/PPP点到点协议/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-21
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/21/PPP点到点协议/">
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/21/PPP点到点协议/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">21</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/21/NAT和PAT/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/21/NAT和PAT/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/21/NAT和PAT/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/21/NAT和PAT/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-21
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/21/NAT和PAT/">
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/21/NAT和PAT/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">20</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview3.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-20
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">20</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/20/ACL访问控制协议/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/20/ACL访问控制协议/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/20/ACL访问控制协议/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/20/ACL访问控制协议/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-20
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/20/ACL访问控制协议/">
-                    
-                    <img src="/imgs/preview/preview1.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/20/ACL访问控制协议/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">20</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/20/配置路由重分布和路由映射表：/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/20/配置路由重分布和路由映射表：/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/20/配置路由重分布和路由映射表：/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/20/配置路由重分布和路由映射表：/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-20
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/20/配置路由重分布和路由映射表：/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/20/配置路由重分布和路由映射表：/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">20</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/20/配置OSPF动态路由/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/20/配置OSPF动态路由/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/20/配置OSPF动态路由/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview4.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/20/配置OSPF动态路由/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-20
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/20/配置OSPF动态路由/">
-                    
-                    <img src="/imgs/preview/preview4.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/20/配置OSPF动态路由/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/PVST生成树协议/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/PVST生成树协议/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/PVST生成树协议/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview3.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/PVST生成树协议/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/PVST生成树协议/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/PVST生成树协议/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/热备份路由协议/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/热备份路由协议/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/热备份路由协议/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview3.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/热备份路由协议/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/热备份路由协议/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/热备份路由协议/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">08月</span>
-        <span class="day">17</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2019/08/17/1、静态路由/">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2019/08/17/1、静态路由/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2019/08/17/1、静态路由/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2019/08/17/1、静态路由/">
-                        <span></span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2019-08-17
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2019/08/17/1、静态路由/">
-                    
-                    <img src="/imgs/preview/preview1.jpg" alt="">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2019/08/17/1、静态路由/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-</div>
-<!-- 前方最多7个 < 1 2 3 4 5 6 -->
-<!-- 前方超过第7页则分为 < 1 ... (n - 3) (n - 2) (n - 1) n, 此时前面为固定的6个 -->
-
-<!-- 后方最多8个 (n + 1) 到 (n + 7) > -->
-<!-- 如果末页和当前页相差超过7, 此时后面为固定的6个, (n + 1) (n + 2) (n + 3) ... total > -->
-
-
-
-<div id="gal-pagination" class="clearfix">
-    <ul class="pagination pagination-gal pull-right">
-        
-        
-        
-        
-        <li class="current">
-            <span>1</span>
-        </li>
-        
-        
-        <li>
-            <a href="/page/2">2</a>
-        </li>
-        
-        
-        
-        <li class="next">
-            <a href="/page/2/">»</a>
-        </li>
-        
-    </ul>
-</div>
-
                 </div>
-                <aside class="col-md-4 gal-left" id="sidebar">
-    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
-<aside id="sidebar-search">
-    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <form class="form-inline clearfix" id="search-form" method="get"
-              action="/search/index.html">
-            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
-            <button class="btn btn-danger btn-gal" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
+            </nav>
+        </header>
     </div>
-</aside>
-    <aside id="sidebar-author">
-    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
-        <div class="panel-heading" style="text-align: center">
-            <i class="fa fa-quote-left"></i>
-            YY
-            <i class="fa fa-quote-right"></i>
-        </div>
-        <div class="author-panel text-center">
-            <img src="/imgs/avatar.jpg" width="140" height="140"
-                 alt="个人头像" class="author-image">
-            <p class="author-description"></p>
-        </div>
-    </div>
-</aside>
-    
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
-    </div>
-</aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
-    
-    
-    <aside id="sidebar-recent_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            近期文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/QOS服务质量配置/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/PPP点到点协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/NAT和PAT/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/ACL访问控制协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置路由重分布和路由映射表：/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置OSPF动态路由/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/PVST生成树协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/热备份路由协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/1、静态路由/"></a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="sidebar-rand_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            随机文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/1、静态路由/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/NAT和PAT/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/ACL访问控制协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/OSI参考七层模型：/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/21/PPP点到点协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/热备份路由协议/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/配置EIGRP/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/17/配置rip动态路由/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/08/20/配置路由重分布和路由映射表：/"></a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="gal-sets">
-        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-            <ul class="nav nav-pills pills-gal">
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-QOS服务质量配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/21/QOS服务质量配置/" class="article-date">
+      <time datetime="2019-08-21T10:54:39.418Z" itemprop="datePublished">2019-08-21</time>
+</a>
 
-                
-                <li>
-                    <a href="/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
-                </li>
-                
-                
-                <li>
-                    <a href="/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
-                </li>
-                
-                
-                <li>
-                    <a href="/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-                
-            </ul>
-            <div class="tab-content">
-                
-                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
-    
-</div>
-                
-                
-                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
-    
-    <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
-    </li>
-    
-</div>
-                
-                
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
-    </li>
-    
-    <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
-    </li>
-    
-</div>
-                
-            </div>
-        </div>
-    </aside>
-    
-</aside>
-            </div>
-        </div>
     </div>
-    <footer id="gal-footer">
-    <div class="container">
-        Copyright © 2018 YY Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="QOS服务质量配置"><a href="#QOS服务质量配置" class="headerlink" title="QOS服务质量配置"></a>QOS服务质量配置</h1><p><img src="https://s2.ax1x.com/2019/08/21/mUre7F.png" alt></p>
+<p>QOS（（服务质量）是网络的一种安全机制, 是一种用于解决网络延迟和阻塞等问题的技术，包括传输的带宽、传送的时延、数据的丢包率等。在网<br>络中可以通过保证传输的带宽、降低传送的时延、降低数据的丢包率以及时延抖动等措施来提高服务质量。</p>
+<p>CBWFQ配置：（CBWFQ：基本类型的加权公平排队。CBWFQ能根据用户定义识别出某种类流，并为该条流分配一定的权重）<br>Router(config)#class-map http_ftp  //创建名为http_ftp分类表，并进入分类表模式<br>Router(config-cmap)#match protocol http //匹配http协议<br>Router(config-cmap)#match protocol ftp  //匹配ftp协议建立<br>Router(config)#policy-map duilie //创建名为duilie的策略表，并进入策略表模式<br>Router(config-pmap)#class http_ftp //建立名为http_ftp分类表<br>Router(config-pmap-c)#bandwidth 512 //设置带宽为512<br>Router(config-pmap-c)#exit<br>Router(config-pmap)#class class-default  //默认类<br>Router(config-pmap-c)#fair-queue      //设置端口队列<br>Router(config-pmap-c)#int f0/1<br>Router(config-if)#service-policy output duilie 应用队列策略<br>Router#show policy-map   //查看CBWFQ的配置情况</p>
+<p>PQ的配置：（PQ：优先权排队。可以配置高（High）、中（Middle）、普通（Normal）、低（Low）四种通信优先级，优先权级别高的通信总会比优先权级别低的通信提前得到服务。）<br>使用PQ设置来保证web服务优先传输，ftp服务 优先级设置为最低：<br>Router(config)#ip access-list extended 101<br>Router(config-ext-nacl)#permit tcp any any eq www<br>Router(config)#ip access-list extended 102<br>Router(config-ext-nacl)#permit tcp any any eq ftp<br>Router(config)#priority-list 1 protocol ip high list 101  //根据协议类型排队的优先级<br>Router(config)#priority-list 1 protocol ip low list 102<br>Router(config-if)#priority-group 1 将优先级列表应用到接口上<br>Router#show queueing   //查看PQ配置情况</p>
+<p>CQ的配置：<br>设置ftp服务的优先级发送在www服务前发送<br>Router(config)#access-list 102 permit tcp any any eq ftp<br>Router(config)#access-list 103 permit tcp any any eq www<br>Router(config)#queue-list 1 protocol ip 1 list 102<br>Router(config)#queue-list 1 protocol ip 2 list 103<br>Router(config-if)#priority-group 1<br>Router#show queueing<br>Current custom queue configuration:</p>
+<p>List Queue Args<br>1 1 protocol ip list 102<br>1 2 protocol ip list 103<br>Current random-detect configuration:</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-PPP点到点协议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/21/PPP点到点协议/" class="article-date">
+      <time datetime="2019-08-21T10:47:51.926Z" itemprop="datePublished">2019-08-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="PPP点到点协议"><a href="#PPP点到点协议" class="headerlink" title="PPP点到点协议"></a>PPP点到点协议</h1><p><img src="https://s2.ax1x.com/2019/08/21/mUDcWR.png" alt></p>
+<p>pap与 chap配置：<br>R1与R2之间配置pap认证：<br>R1(config)#username YY password ccie                   设置本地账户和密码<br>R1(config)#int s2/0                                    进入端口<br>R1(config-if)#encapsulation ppp                        开启ppp封装<br>R1(config-if)#ppp authentication pap                   ppp采取pap认证方式<br>R2(config)#int s2/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp pap sent-username YY password  ccie  发送账户和密码进行认证<br>chap的三次握手：<br>R2发送一个随机值给R1，R1收到后将随机值和chap认证中配置的密码cisco进行hash运算，<br>然后将自己chap配置的用户名ccie和hash值发给R2，R2检查用户名是否为自己配置的ccie，<br>并将自己的发送的随机值和自己配置的认证密码cisco做hash运算，结果一直则说明R1认证成功。<br>R2与R3配置chap双向项认证：<br>R2(config)#username R3 password  ccie<br>R2(config-if)#int s3/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp authentication  chap<br>R3(config)#username R2 PAssword ccie<br>R3(config)#int s2/0<br>R3(config-if)#encapsulation ppp<br>R3(config-if)#ppp authentication chap<br>R2与R3配置单项向认证<br>R2(config)#username R3 password  ccie<br>R2(config-if)#int s3/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp authentication  chap<br>R3(config)#int s2/0<br>R3(config-if)#encapsulation ppp<br>在chap认证中如果你设置的认证双方的用户名不是对方的设备名，那麽就要在最后就上这两个语句<br>R3(config-if)#ppp chap hostname 加上用户名<br>R3(config-if)#ppp chap password 加上用户密码</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NAT和PAT" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/21/NAT和PAT/" class="article-date">
+      <time datetime="2019-08-21T10:36:17.465Z" itemprop="datePublished">2019-08-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="NAT和PAT"><a href="#NAT和PAT" class="headerlink" title="NAT和PAT:"></a>NAT和PAT:</h1><p><img src="https://s2.ax1x.com/2019/08/21/mUwIoj.png" alt><br>IPV4 可用的地址2^-2=40亿<br>NAT的作用：<br>1、一个解决网络地址不足的问题<br>2、将局域网络隐藏在共有网络内，增加网络的安全性。<br>三种NAT类型：<br>静态NAT<br>动态NAT<br>过载NAT<br>端口地址翻译（PAT）</p>
+<p>静态NAT配置<br>Router(config)#ip nat inside source static  192.168.0.1 61.1.1.1<br>Router(config)#int f0/0.1<br>Router(config-subif)#ip nat in<br>Router(config-subif)#ip nat inside<br>Router(config-subif)#int f0/0.2<br>Router(config-subif)#ip nat inside<br>Router(config-subif)#int s1/0<br>Router(config-if)#ip nat outside<br>Router(config-if)#exit<br>动态NAT配置：<br> 公网地址池：61.1.1.3-61.1.1.8<br> Router(config)#ip nat pool a 61.1.1.3 61.1.1.8 netmask 255.255.255.0<br> Router(config)#access-list 1 permit 192.168.0.1 255.255.255.0<br> Router(config)#ip nat inside source list 1 pool a<br>配置过载NAT：<br>Router(config)#int f0/0.1<br>Router(config-subif)#ip nat in<br>Router(config-subif)#ip nat inside<br>Router(config-subif)#int f0/0.2<br>Router(config-subif)#ip nat inside<br>Router(config-subif)#int s1/0<br>Router(config-if)#ip nat outside<br>Router(config)#access-list 1 permit 192.168.0.1 255.255.255.0<br>Router(config)#ip nat inside source list 1 interface overload</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-单臂路由、三层交换机实现vlan间通信" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/20/单臂路由、三层交换机实现vlan间通信/" class="article-date">
+      <time datetime="2019-08-20T10:32:04.765Z" itemprop="datePublished">2019-08-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<h2 id="配置端口安全-虚拟局域网技术-三层交换机实现不同vlan间的通信-单臂路由实现vlan间的通信"><a href="#配置端口安全-虚拟局域网技术-三层交换机实现不同vlan间的通信-单臂路由实现vlan间的通信" class="headerlink" title="配置端口安全+虚拟局域网技术+三层交换机实现不同vlan间的通信+单臂路由实现vlan间的通信"></a>配置端口安全+虚拟局域网技术+三层交换机实现不同vlan间的通信+单臂路由实现vlan间的通信</h2><p>配置端口安全：限制最大连接数1.如果超过1就关闭窗口</p>
+<p>Switch#config t</p>
+<p>Switch(config)#int f0/1</p>
+<p>Switch(config-if)#sw mode access  （设置端口模式为接入模式）</p>
+<p>Switch(config-if)#switchport port-security</p>
+<p>Switch(config-if)#switchport port-security maximum 1</p>
+<p>Switch(config-if)#switchport port-security violation shutdown</p>
+<p>配置端口安全：绑定MAC地址如果违规就关闭窗口</p>
+<p>Switch(config)#int f 0/2</p>
+<p>Switch(config-if)#sw mo acc（设置端口模式为接口模式）</p>
+<p>Switch(config-if)#switchport port-security</p>
+<p>Switch(config-if)#switchport port-security mac-address 0001.97C4.B26E（设置固定的MAC地址，只允许它访问）</p>
+<p>Switch(config-if)#switchport port-security violation shutdown（设置如果不是规定的MAC地址就关闭窗口 f0/2）</p>
+<p>Vlan（虚拟局域网）技术：</p>
+<p>1、默认情况下交换机的所有端口都在vlan1中</p>
+<p>Switch#sh vlan brief 或者Switch#sh vlan(查看交换机vlan)</p>
+<p>修改用户名：Switch(config)#hostname SW1</p>
+<p>创建两个vlan以及名字</p>
+<p>SW1(config)#vlan 10</p>
+<p>SW1(config-vlan)#</p>
+<p>SW1(config-vlan)#name rsb</p>
+<p>SW1(config-vlan)#vlan 20</p>
+<p>SW1(config-vlan)#name xsb</p>
+<p>修改用户名</p>
+<p>SW2(config)#vlan 10</p>
+<p>SW2(config-vlan)#name rsb</p>
+<p>SW2(config-vlan)#vlan 20</p>
+<p>SW2(config-vlan)#name xsb</p>
+<p>将对应端口放入对应的vlan</p>
+<p>二交换机是不能实现不同广播之间通信的，如果要实现不同的vlan进行通信必须要是有三层设备（路由器或者三层交换）</p>
+<p>方法一：使用三层交换机进行不同的vlan的通信。</p>
+<p>第一步：先在三层交换机上面划分vlan间的通信,先修改用户为SW3</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mYCy2d.png" alt></p>
+<p>第二步修改trunk,但是显示需要封装，所以先去封装，再次trunk模式</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mYiCtS.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mYiA6s.png" alt></p>
+<p>为svi虚拟接口配置IP地址分别作为不同的vlan的网关并且开启路由功能然后为计算机配置网关地址（IP一定要与网管地址的网络位相同）</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mYie00.png" alt></p>
+<p>方法二:</p>
+<p>使用路由器实现vlan间的通信（单臂路由）</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mYiukT.png" alt></p>
+<p>第一步：划分vlan</p>
+<p>第二部：将端口加入vlan（将1到10的端口都加入到vlan100中，11到22的多安康都加入到vlan20中）</p>
+<p>第三部：设置trunk：</p>
+<p>第四部：将路由端口开启</p>
+<p>第五步：开启子接口并封装为dot1q标准，设置IP地址分别为vlan100 vlan200网关</p>
+<p>R1(config)#int f0/0.100（跟vlan100对应）</p>
+<p>R1(config-subif)#encapsulation dot1Q 100（dot1Q后面加的是该子接口连接的vlan号）</p>
+<p>设置PC机设置正确的网关地址，IP地址的网络位置一定要与网关地址相对应</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ACL访问控制协议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/20/ACL访问控制协议/" class="article-date">
+      <time datetime="2019-08-20T10:03:20.700Z" itemprop="datePublished">2019-08-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<h2 id="ACL访问控制协议"><a href="#ACL访问控制协议" class="headerlink" title="ACL访问控制协议"></a>ACL访问控制协议</h2><p><img src="https://s2.ax1x.com/2019/08/20/mYplLV.png" alt></p>
+<p>案例一：禁止学生宿舍行政楼访问财务室</p>
+<p>编号命名标准ACL:</p>
+<p>禁止学生宿舍网络（后面的是掩码反码）</p>
+<p>Router(config)#access-list 10 deny 192.168.10.0 0.0.0.255</p>
+<p>禁止行政楼访问财务室</p>
+<p>Router(config)#access-list 10 deny host 192.168.20.1</p>
+<p>允许其他所有的访问</p>
+<p>Router(config)#access-list 10 permit any</p>
+<p>进入端口，设置out</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 10 out </p>
+<p>案例二：拒绝学生宿舍访问www服务</p>
+<p>禁止学生宿舍使用tcp协议访问www服务</p>
+<p>Router(config-ext-nacl)#deny tcp 192.168.10.0 0.0.0.255 host 192.168.100.1 eq www</p>
+<p>允许其他的访问</p>
+<p>Router(config-ext-nacl)#peimit ip any any</p>
+<p>进入端口，设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc YY in </p>
+<p>案例三：禁止学生宿舍ping服务器，但是可以访问网站</p>
+<p>禁止学生宿舍ping服务器</p>
+<p>Router(config)#ACCess-list 100 deny icmp 192.168.10.0 0.0.0.255 host 192.168.100.1 echo</p>
+<p>允许其他的访问</p>
+<p>Router(config)#access-list 100 permit ip any any</p>
+<p>进入端口设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 100 in </p>
+<p>案例四：学生宿舍不可以ping服务器，不能用<a href="http://www.gxa.com访问网站，但可以用地址访问网站。" target="_blank" rel="noopener">www.gxa.com访问网站，但可以用地址访问网站。</a></p>
+<p>设置它为扩展型</p>
+<p>Router(config)#ip access-list extended 100</p>
+<p>禁止ping</p>
+<p>Router(config-ext-nacl)#deny icmp 192.168.10.0 0.0.0.255 192.168.100.0 0.0.0.255 echo</p>
+<p>禁止DNS域名访问</p>
+<p>Router(config-ext-nacl)#deny udp 192.168.10.0 0.0.0.255 192.168.100.0 0.0.0.255 eq domain</p>
+<p>允许其他所有访问</p>
+<p>Router(config-ext-nacl)#permit ip any any</p>
+<p>端口设置in</p>
+<p>Router(config)#int f0/0</p>
+<p>Router(config-if)#ip acc 100 in</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-配置路由重分布和路由映射表：" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/20/配置路由重分布和路由映射表：/" class="article-date">
+      <time datetime="2019-08-20T09:30:11.108Z" itemprop="datePublished">2019-08-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<h2 id="路由重分布与路由映射表"><a href="#路由重分布与路由映射表" class="headerlink" title="路由重分布与路由映射表"></a>路由重分布与路由映射表</h2><p>路由重分布：<br>给rip设置metric值为3，如果不设置，默认为不可达，就通不了其他的协议<br>R1(config)#router rip<br>R1(config-router)#re<br>R1(config-router)#redistribute sta<br>R1(config-router)#redistribute static me<br>R1(config-router)#redistribute static metric 3<br>给R2配置两个不同协议互通<br>R2(config)#router rip<br>R2(config-router)#redistribute eigrp 1<br>R2(config-router)#default-metric 4<br>R2(config)#router eigrp 1<br>R2(config-router)#redistribute rip metric 1000 100 255 1 1500<br>给R3配置不同协议互通：<br>R3(config)#router eigrp 1<br>R3(config-router)#redistribute rip metric 1000 100 255 1 1500<br>R3(config-router)#distance eigrp 90 150（配置eigrp的默认管理距离，内部90，外部150）</p>
+<p>R3(config)#router ospf 1<br>R3(config-router)#redistribute eigrp 1 metric-type 1 subnets<br>R3(config-router)#redistribute maximum-prefix 100 50（100表示最大条目为100 ，50是表示超过最大路由条目的百分之50开始提示，warning-only表示只是提示，并不会限制充分的路由条目）</p>
+<p>策略路由：<br>一、基于源地址的策略路由配置：</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mJT44f.png" alt></p>
+<p>配置ACL（配置两条规则）<br>R1(config)#access-list 1 permit 172.16.1.2<br>R1(config)#access-list 2 permit 172.16.1.3<br>配置路由映射表<br>R1(config)#route-map CCNA permit 10             （路由映射表名  10）<br>R1(config-route-map)#match ip address 1         （执行1这个规则）<br>R1(config-route-map)#set ip next-hop 172.16.12.2（设定下一跳端口ip）<br>R1(config-route-map)#exit<br>R1(config)#route-map CCNA permit 20<br>R1(config-route-map)#match ip address 2<br>R1(config-route-map)#set ip next-hop 172.16.21.2<br>应用策略路由<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCNA<br>实验调试：<br>1、查看路由路径(路由追踪)<br>PC2#traceroute 172.16.2.2<br>PC3#traceroute 172.16.2.2<br>2、在R1上显示调试信息<br>R1#debug ip policy<br>PC2：ping 172.16.2.2<br>PC6:ping 172.16.2.2<br>3、显示在哪些接口上应用了策略路由<br>R1#sh ip policy</p>
+<p>二、基于数据包长度的策略路由配置：</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mJ7raq.png" alt></p>
+<p>配置路由映射表<br>R1(config)#route-map CCNP permit 10<br>R1(config-route-map)#match length 64 100   （设置64-100字节的数据包限制）<br>R1(config-route-map)#set interface s1/0     （指定接口传输数据包）<br>R1(config)#route-map CCNP permit 20<br>R1(config-route-map)#match length 101 1000    （设置101-1000字节数据包）<br>R1(config-route-map)#set interface f0/1          （指定接口）<br>应用策略路由<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCNP<br>R1(config-if)#exit<br>R1(config)#ip local policy route-map CCNP<br>显示定义的所有路由策略及路由策略匹配的情况<br>R1#sh ip route-map CCNP</p>
+<p>三、基于应用的策略路由配置</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mJ76iV.png" alt></p>
+<p>配置R2的http与telnet访问<br>R2(config)#ip http server<br>R2(config)#line vty 0 4<br>R2(config-line)#no login<br>R2(config-line)#privilege level 15   （设置优先级）<br>配置扩展ACL<br>R1(config)#ip access-list extended HTTP<br>R1(config-ext-nacl)#permit tcp any any eq 80<br>R1(config-ext-nacl)#exit<br>R1(config)#ip access-list extended TELNET<br>R1(config-ext-nacl)#permit tcp any any eq 23<br>配置路由映射表<br>R1(config)#route-map CCIE permit 10<br>R1(config-route-map)#match ip address HTTP<br>R1(config-route-map)#set ip precedence flash<br>R1(config-route-map)#set ip next-hop 172.16.12.2<br>R1(config)#route-map CCIE permit 20<br>R1(config-route-map)#match ip address TELNET<br>R1(config-route-map)#set ip precedence critical<br>R1(config-route-map)#set ip next-hop 172.16.21.2<br>应用路由映射表<br>R1(config)#int f0/0<br>R1(config-if)#ip policy route-map CCIE<br>R1(config)#ip local policy route-map CCIE</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-配置OSPF动态路由" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/20/配置OSPF动态路由/" class="article-date">
+      <time datetime="2019-08-20T09:18:23.000Z" itemprop="datePublished">2019-08-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<h2 id="OSPF路由协议（链路状态"><a href="#OSPF路由协议（链路状态" class="headerlink" title="OSPF路由协议（链路状态"></a>OSPF路由协议（链路状态</h2><p>）<br>工业标准，工作在网络层<br>组播地址：224.0.0.5 224.0.0.6<br>OSPF概述：<br>通过交换Hello数据包来建立邻居关系<br>以传播LSA代替路由表更新<br>      链路：路由器接口<br>      状态：描述接口以及他与邻居路由器的关系<br>  将LSA    泛洪到所有区域的OSPF路由器，而不是单独的一个<br>  分为三张表：<br>            邻居表<br>            数据库<br>            路由表<br>OSPF分层路由：基于端口划分区域<br>主干路由器（BR）<br>区域边界路由器（ABR）<br>自治系统边界路由器（ASBR）<br>划分区域的好处：<br>减少路由表的路由条目<br>拓扑发生改变时，只影响本区域的数据库<br>每个30分钟泛数据库信息（周期与触发更新）只在本区域泛洪<br>使用OSPF配置负载均衡：<br>默认情况下，最多可在路由表中加入四条等价路径：<br>     可以最多配置16条路径<br>    (config-router)# maximum-paths<value><br>    可以更改特殊链路的开销以确保路径等价于负载均衡：<br>    (config-if)#ip ospf cost <vlaue><br>配置身份认证：<br>   （1）配置明文认证<br>        R1(config-if)#ip ospf authentication-key ccie   设置明文密码，两端口密码要一致<br>        R1(config-if)#ip ospf authentication     开启认证<br>   （2）配置密码认证<br>        R1(config-if)#ip ospf message-digest-key 1 md5 ccie<br>        R1(config-if)#ip ospf authentication<br>   （3）配置区域认证<br>        R1(config-if)#ip ospf message-digest-key 1 md5 ccie<br>        R1(config-router)#area 1 authentication message-digest<br>        区域明文认证<br>        R1(config-if)#ip ospf authentication-key ccie<br>        R1(config-router)#area 1 authentication<br>查看是否配置ospf:sh ip protocols<br>查看邻居表：sh ip ospf neighbor<br>查看链路状态数据库（拓朴表）：sh ip ospf database<br>查看路由表：sh ip route /sh ip route ospf<br>查看ospf进程及相关信息：sh ip ospf<br>查看运行ospf接口的信息：sh ip ospf interface f0/0<br>路由汇总：<br>R2(config-router)#area 1 range 172.16.0.0 255.255.255.252<br>路由重分配<br>R3(config)#router ospf 1<br>R3(config-router)#redistribute eigrp 1 subnets 默认为 metric-type 2  OE2,Metric为20，不累加<br>R3(config-router)#redistribute eigrp 1 metric-type 1 metric 100 subnets  metric-type 1  OE1<br>R3(config)#router eigrp 1<br>R3(config-router)#redistri bute ospf 1 metric 1000 100 255 1 1500（带宽 延迟 可靠性 负载 MTU（最大传输单元））<br>配置外部自治系统路由汇总<br>R3(config)#router ospf 1<br>R3(config-router)#summary-address 192.168.0.0 255.255.252.0<br>在R2上看路由表，会发现有一条路由为：<br>172.16.0.0/22 is a summary, 00:12:06, Null0<br>为避免一路，请使用以下命令：<br>R2(config-router)#no discard-route<br>OSPF的路由类型：<br>O    ：域内路由<br>O/A  ；域间路由<br>OE1  :域外路由  会累加METRIC值<br>OE2  :域外路由，不累加METRIC值默认20，由外部重分布进来默认使用OE2</vlaue></value></p>
+<p>最短路径优先算法（SPF Calculation）<br>Cost=108/BW（b/s)<br>metric值=所有目的地址到达本地路由器的入接口的cost值之和<br>metric值=所有本地路由器到达目的地址的路由器的出接口的cost值之和<br>也可以使用命令sh ip ospf interface loopback 0 查看接口的cost值 </p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mJhDVf.png" alt></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-PVST生成树协议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/PVST生成树协议/" class="article-date">
+      <time datetime="2019-08-17T09:54:57.548Z" itemprop="datePublished">2019-08-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>PVST 生成树协议</p>
+<p>1、什么是PVST</p>
+<p>PVST是Cisco私有的，为每个VLAN构造一棵生成树</p>
+<p>2、PVST在实际中的应用</p>
+<p>配置网络中比较稳定的交换机为根网桥</p>
+<p>利用PVST实现网络的负载分担</p>
+<p>3、PVST的配置</p>
+<p>命令启用生成树：Switch(config)#spanning-tree vlan vlan-list</p>
+<p>设置根网桥：Switch(config)#spanning-tree vlan vlan-list root primary | secondary</p>
+<p>-设置为primary后，优先级变成24576</p>
+<p>-设置为secondary后， 优先级变成28672</p>
+<p>修改网桥的优先级：Switch(config)#spanning-tree vlan vlan-list priority Bridge-priority </p>
+<p>-优先级的值为4096的倍数</p>
+<p>修改端口成本：Switch(config-if)#spanning-tree vlan vlan-list cost cost</p>
+<p>修改端口优先级：Switch(config-if)#spanning-tree vlan vlan-list port-priority priority</p>
+<p>配置上行速链路：Switch(config)#spanning-tree uplinkfast</p>
+<p>配置端口速链路：Switch(config-if)#spanning-tree portfast</p>
+<p>查看生成树的配置：Switch#show spanning-tree</p>
+<p>查看某个VLAN的生成树详细信息：Switch#show spanning-tree vlan vlan-id detail</p>
+<p><strong>三、**</strong>以太网端口聚合**</p>
+<p><strong>1、**</strong>什么是端口聚合？**</p>
+<p>链路聚合又称为端口聚合，端口捆绑，英文名porttrunking。是一种聚合多个物理接口 ( that ) 创建一个逻辑接口。你可以捆扎( bundle ) 八个单独的活动链接到一个信道端口，以提供更高的<strong>带宽</strong>和<strong>冗余</strong>。端口通道也负载平衡这些物理接口上的通信量。只要端口通道中的至少一个物理接口可操作，端口通道就可以保持运行。</p>
+<p><strong>2、**</strong>channel-group** <strong>模式</strong></p>
+<p>PAgP 是 Cisco私有，只能在 Cisco Switch 上设定，PAgP 有两个模式，分別是 Desirable 与 Auto当 PAgP 成功建立 EtherChannel 后，PAgP Message 会继续定时传送去维持 EtherChannel。</p>
+<p>Desirable  Auto</p>
+<p>Desirable    √         √   主动发送PAgP报文</p>
+<p>Auto        √         x   被动发送PAgP报文</p>
+<p>On                        手动设置，需要两边都设置</p>
+<p>LACP 是 IEEE Standard</p>
+<p>Active  Passive</p>
+<p>Active        √         √   主动发送LACP报文</p>
+<p>Passive       √         x    主动接收LACP报文</p>
+<p><strong>3、**</strong>channel-group<strong>**说明</strong></p>
+<p>（1）Cisco最多允许EtherChannel绑定8个端口；如果是百兆网络，总带宽可达1.6Gbit/s；如果是千兆网络，总带宽可达16Gbit/s。</p>
+<p>（2）EtherChannel不支持10M端口；</p>
+<p>（3）EtherChannel编号只在本地有效，链路两端的编号可以不一样；</p>
+<p>（4）EtherChannel默认使用PAgP协议；</p>
+<p>（5）EtherChannel默认情况下是基于源MAC地址的负载平衡；</p>
+<p>（6）一个EtherChannel内所有的端口都必须具有相同的端口速率和双工模式，LACP只能是全双工模式；</p>
+<p>（7）channel-group接口会自动继承最小物理接口，或最先配置的接口模式；</p>
+<p>（8）cisco的交换机不仅可以支持第二层EtherChannel,还可以支持第三层EtherChannel。</p>
+<p><strong>4、配置端口聚合</strong></p>
+<p>Switch(config)#int port-channel 1</p>
+<p>Switch(config-if)#switchport mode trunk</p>
+<p>Switch(config)#int range f0/1-2</p>
+<p>Switch(config-if-range)#channel-group 1 mode on</p>
+<p><strong>5、配置流量均衡</strong></p>
+<p>Switch(config)#int f0/1</p>
+<p>Switch(config-if)#spanning-tree vlan 10 port-priority 16</p>
+<p>Switch(config-if)#spanning-tree vlan 20 port-priority 32</p>
+<p>Switch(config)#int f0/2</p>
+<p>Switch(config-if)#spanning-tree vlan 10 port-priority 32</p>
+<p>Switch(config-if)#spanning-tree vlan 20 port-priority 16</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-热备份路由协议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/热备份路由协议/" class="article-date">
+      <time datetime="2019-08-17T09:31:05.062Z" itemprop="datePublished">2019-08-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>热备份路由协议</strong></p>
+<p><a href="https://baike.baidu.com/item/热备份路由协议/4389963" target="_blank" rel="noopener"><strong>热备份路由协议</strong></a><strong>(**</strong>HSRP<strong>**)</strong></p>
+<p>是思科推出的用于建立容错<a href="https://baike.baidu.com/item/默认网关/2152622" target="_blank" rel="noopener">默认网关</a>的专有<a href="https://baike.baidu.com/item/冗余协议/2828235" target="_blank" rel="noopener">冗余协议</a>，由RFC 2281进行描述。</p>
+<p><strong>虚拟路由</strong><a href="https://baike.baidu.com/item/冗余协议" target="_blank" rel="noopener"><strong>冗余协议</strong></a><strong>(**</strong>VRRP<strong>**)</strong></p>
+<p>是基于标准的HSRP替代协议，由IETF标准RFC 3768进行描述。这两种技术在概念上相似，但互不兼容。</p>
+<p>** 工作原理**</p>
+<p>HSRP在网络<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>之间建立<a href="https://baike.baidu.com/item/默认网关" target="_blank" rel="noopener">默认网关</a>的倒换框架，当主<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>不可达时进行切换。此协议经常与快速会聚路由协议EIGRP或OSPF<a href="https://baike.baidu.com/item/协同工作" target="_blank" rel="noopener">协同工作</a>。HSRP使用<a href="https://baike.baidu.com/item/多播地址" target="_blank" rel="noopener">多播地址</a>224.0.0.2和UDP端口1985向其他启用HSRP协议的<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>发送HELLO<a href="https://baike.baidu.com/item/报文" target="_blank" rel="noopener">报文</a>，来交流路由器间的优先级。配置有最高优先级的主路由器将成为<a href="https://baike.baidu.com/item/虚拟路由器" target="_blank" rel="noopener">虚拟路由器</a>，以预先配置好的<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>IP和MAC地址0000.0c07.acXX（XX是组IP的十六进制值）回应局域网对网关的ARP的请求。如果主<a href="https://baike.baidu.com/item/路由器" target="_blank" rel="noopener">路由器</a>宕机，次优先级路由器将接管<a href="https://baike.baidu.com/item/网关" target="_blank" rel="noopener">网关</a>IP并以同样的MAC地址回应ARP的请求，这样就实现了透明的<a href="https://baike.baidu.com/item/默认网关" target="_blank" rel="noopener">默认网关</a>自动倒换。</p>
+<p>热备份路由协议确保在某一时间内只有一台路由器（称为主动路由器）以虚拟路由器的名义转发数据包。备份路由器被选择，并时刻准备成为主动路由器（在当前主动路由器失效的情况下）。热备份路由协议定义了一种通过IP地址来确定主动和备份路由器的<a href="https://baike.baidu.com/item/机制" target="_blank" rel="noopener">机制</a>。一旦这些<a href="https://baike.baidu.com/item/确定" target="_blank" rel="noopener">确定</a>了，一个主动路由器出故障就不会出现重大的连接中断现象。</p>
+<p>在任何特定的网络中，可能有多个，也可能是重叠的，热备份群，每一个都有单一的媒体访问控制（MAC）地址和IP地址；IP地址应该属于初级子网，但它必须与实际或虚拟的地址（分配给网络中路由器或主机的地址）不同。 [1] </p>
+<p>HSRP和VRRP都不是路由协议，因为它们不发布IP路由也不影响<a href="https://baike.baidu.com/item/路由表" target="_blank" rel="noopener">路由表</a>。</p>
+<p>3、HSRP配置</p>
+<p><img src="https://t1.picb.cc/uploads/2019/08/17/gNzXsL.png" alt></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-1、静态路由" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/17/1、静态路由/" class="article-date">
+      <time datetime="2019-08-17T09:18:31.255Z" itemprop="datePublished">2019-08-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p> <strong>1、静态路由</strong></p>
+<p>指定一条可以到达目标网络的路径</p>
+<p>Router(config)#ip route network    [mask]{address | interface}[distance] [permanent]</p>
+<p>这是一个单方向的路由. 你必须配置一条反方向的路由</p>
+<p><strong>2、静态汇总路由</strong></p>
+<p><strong>3、静态默认（缺省）路由</strong></p>
+<p><strong>4、静态选择路由</strong></p>
+<p><strong>5、浮动静态路由</strong></p>
+<p><strong>6、用静态路由实现负载均衡</strong></p>
+<p><img src="https://t1.picb.cc/uploads/2019/08/17/gNzaHa.png" alt></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 YY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
 </footer>
 
-<!-- 回到顶端 -->
-<div id="gal-gotop">
-    <i class="fa fa-angle-up"></i>
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
 </div>
-</body>
-<script src="/js/activate-power-mode.js"></script>
 <script>
-
-    // 配置highslide
-	hs.graphicsDir = '/js/highslide/graphics/'
-    hs.outlineType = "rounded-white";
-    hs.dimmingOpacity = 0.8;
-    hs.outlineWhileAnimating = true;
-    hs.showCredits = false;
-    hs.captionEval = "this.thumb.alt";
-    hs.numberPosition = "caption";
-    hs.align = "center";
-    hs.transitions = ["expand", "crossfade"];
-    hs.lang.number = '共%2张图, 当前是第%1张';
-    hs.addSlideshow({
-      interval: 5000,
-      repeat: true,
-      useControls: true,
-      fixedControls: "fit",
-      overlayOptions: {
-        opacity: 0.75,
-        position: "bottom center",
-        hideOnMouseOut: true
-      }
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
     })
+</script>
 
-    // 初始化aos
-    AOS.init({
-      duration: 1000,
-      delay: 0,
-      easing: 'ease-out-back'
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
     });
-
 </script>
-<script>
-	POWERMODE.colorful = 'true';    // make power mode colorful
-	POWERMODE.shake = 'true';       // turn off shake
-	// TODO 这里根据具体情况修改
-	document.body.addEventListener('input', POWERMODE);
-</script>
-<script>
-    window.slideConfig = {
-      prefix: '/imgs/slide/background',
-      ext: 'jpg',
-      maxCount: '6'
-    }
-</script>
-<script src="/js/hs.js"></script>
-<script src="/js/blog.js"></script>
 
 
-
+  </div>
+</body>
 </html>
